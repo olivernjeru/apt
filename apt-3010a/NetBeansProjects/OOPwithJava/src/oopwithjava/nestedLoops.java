@@ -2,17 +2,23 @@ package oopwithjava;
 import java.util.Scanner;
 
 public class nestedLoops {
-    public static void main (String [] args){
-        int n,j = 0, i = 0;
+//    main method
+    public static void main (String [] myString){
+        int num,j = 0, i = 0;
         for(j=1; j<=5; j++) {
             System.out.println("Please enter the number of values you wanna work with: ");
-            Scanner input = new Scanner(System.in);
-            n = input.nextInt();
+            Scanner n = new Scanner(System.in);
+            num = n.nextInt();
             int sum = 0;
-            for (i = 0; i<=n; i++) {
+            for (i = 0; i<=num; i++) {
                sum = sum + i;
             }
-            System.out.println("The sum of the first " + n + " numbers is " + sum);
+            if(num>1){
+                System.out.println("The sum of the first " + num + " numbers is " + sum);
+            }
+            else{
+                System.out.println("The sum of " + num + " is " + sum);
+        }
         }
     }
 }

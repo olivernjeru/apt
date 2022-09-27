@@ -1,9 +1,10 @@
 package oopwithjava;
+//import scanner class and util package so as to be able to get input from user in primitive data types such as int, float, double, etc
 import java.util.Scanner;
 
 public class FirstN2 {
     
-    public static void main (String[] args) {
+    public static void main (String[] mystring) {
         Scanner input=new Scanner(System.in);
         int n=1;
         int ctr2=1; 
