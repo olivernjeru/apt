@@ -1,0 +1,8 @@
+
+
+Glassfish port configuration
+locate C:\ ...... \glassfish\domains\domain1\config
+
+e.g. C:\users\gchege\AppData\Roaming\NetBeans\8.1\config\GF_4.1.1
+
+edit the "domain.xml" file & change the conflicting port

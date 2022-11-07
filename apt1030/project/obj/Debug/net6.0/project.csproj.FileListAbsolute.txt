@@ -1,0 +1,15 @@
+C:\Users\olive\source\repos\project\bin\Debug\net6.0\project.exe
+C:\Users\olive\source\repos\project\bin\Debug\net6.0\project.deps.json
+C:\Users\olive\source\repos\project\bin\Debug\net6.0\project.runtimeconfig.json
+C:\Users\olive\source\repos\project\bin\Debug\net6.0\project.dll
+C:\Users\olive\source\repos\project\bin\Debug\net6.0\ref\project.dll
+C:\Users\olive\source\repos\project\bin\Debug\net6.0\project.pdb
+C:\Users\olive\source\repos\project\obj\Debug\net6.0\project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\olive\source\repos\project\obj\Debug\net6.0\project.AssemblyInfoInputs.cache
+C:\Users\olive\source\repos\project\obj\Debug\net6.0\project.AssemblyInfo.cs
+C:\Users\olive\source\repos\project\obj\Debug\net6.0\project.csproj.CoreCompileInputs.cache
+C:\Users\olive\source\repos\project\obj\Debug\net6.0\project.dll
+C:\Users\olive\source\repos\project\obj\Debug\net6.0\ref\project.dll
+C:\Users\olive\source\repos\project\obj\Debug\net6.0\project.pdb
+C:\Users\olive\source\repos\project\obj\Debug\net6.0\project.genruntimeconfig.cache
+C:\Users\olive\source\repos\project\obj\Debug\net6.0\project.csproj.AssemblyReference.cache

@@ -1,0 +1,8 @@
+C:\Users\olive\source\repos\arraysgradinglab\bin\Debug\arraysgradinglab.exe.config
+C:\Users\olive\source\repos\arraysgradinglab\bin\Debug\arraysgradinglab.exe
+C:\Users\olive\source\repos\arraysgradinglab\bin\Debug\arraysgradinglab.pdb
+C:\Users\olive\source\repos\arraysgradinglab\obj\Debug\arraysgradinglab.csproj.AssemblyReference.cache
+C:\Users\olive\source\repos\arraysgradinglab\obj\Debug\arraysgradinglab.csproj.SuggestedBindingRedirects.cache
+C:\Users\olive\source\repos\arraysgradinglab\obj\Debug\arraysgradinglab.csproj.CoreCompileInputs.cache
+C:\Users\olive\source\repos\arraysgradinglab\obj\Debug\arraysgradinglab.exe
+C:\Users\olive\source\repos\arraysgradinglab\obj\Debug\arraysgradinglab.pdb
