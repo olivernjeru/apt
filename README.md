@@ -1,5 +1,5 @@
 # APT
-*Contains all my APT classes' code
+* Contains all my APT classes' code
 
 <a href="https://github.com/apt/apt1030">Introduction to Programming with C#</a>
 
