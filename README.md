@@ -14,6 +14,8 @@
 
 * <a href="https://github.com/olivernjeru/apt/tree/main/apt2080">Introduction to Software Engineering</a>
 
-* <a href="https://github.com/olivernjeru/apt/tree/main/APT2090/Assignments">Computer Graphics with OpenGL in C++</a>
+* <a href="https://github.com/olivernjeru/apt/tree/main/apt2090/Assignments">Computer Graphics with OpenGL in C++</a>
+
+* <a href="https://github.com/olivernjeru/apt/tree/main/apt3010">Introduction to Artificial Intelligence</a>
 
 * <a href="https://github.com/olivernjeru/apt/tree/main/apt3040/NetBeansProjects">Object Oriented Programming with Java</a>
