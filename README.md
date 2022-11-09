@@ -16,4 +16,4 @@
 
 * <a href="https://github.com/olivernjeru/apt/tree/main/APT2090/Assignments">Computer Graphics with OpenGL in C++</a>
 
-* <a href="https://github.com/olivernjeru/apt/tree/main/apt3040/NetBeansProjects/OOPwithJava/build/classes/oopwithjava">Object Oriented Programming with Java</a>
+* <a href="https://github.com/olivernjeru/apt/tree/main/apt3040/NetBeansProjects/OOPwithJava/build/classes">Object Oriented Programming with Java</a>
