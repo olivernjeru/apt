@@ -1,4 +1,3 @@
-
 /*
 * GL02Primitive.cpp: Vertex, Primitive and Color
 * Draw Simple 2D colored Shapes: quad, triangle and polygon.
@@ -24,17 +23,18 @@ void updateBall()
 {
     if(!flag)
     {
-        ball_y+=0.05;
-        if(ball_y>1.0)
+        ball_y+=0.001;
+        if(ball_y>0.7)
             flag=1;
     }
     if(flag)
     {
-        ball_y-=0.05;
-        if(ball_y<-1)
+        ball_y-=0.001;
+        if(ball_y<-0.7)
             flag=0;
     }
 }
+
 void display()
 {
     glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
@@ -50,7 +50,7 @@ void display()
     glPushMatrix();
     glColor3f(1,1,0);
     glTranslatef(ball_x,ball_y,ball_z);
-    glutSolidSphere(0.3,60,23);
+    glutSolidSphere(0.3,40,23);
     glPopMatrix();
 	updateBall();
     glutSwapBuffers();
@@ -63,7 +63,7 @@ int main(int argc, char** argv)
 {
 	glutInit(&argc, argv); // initialize the toolkit
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH); // set display mode
-	glutInitWindowSize(700,800); // set window size
+	glutInitWindowSize(640,640); // set window size
 	glutCreateWindow("Bouncing Ball"); // open the screen window
 	glutInitRendering();
 	glutReshapeFunc(reshaped);
