@@ -1,4 +1,4 @@
-package oopwithjava;
+package lab1;
 
 //MultiMethodGreeting Class
 public class multiMethodGreeting {

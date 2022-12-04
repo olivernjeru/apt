@@ -1,5 +1,5 @@
 
-package oopwithjava;
+package lab1;
 
 public class NestedForProgram {
     public static void main (String [] args) {

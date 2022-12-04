@@ -1,4 +1,4 @@
-package oopwithjava; //name of the package that this file is in
+package lab1; //name of the package that this file is in
 import java.util.Scanner; //is import to enable functionality of getting user input
 
 public class multiply { //multiply class

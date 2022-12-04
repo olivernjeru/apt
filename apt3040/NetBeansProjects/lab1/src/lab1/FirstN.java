@@ -1,4 +1,4 @@
-package oopwithjava;
+package lab1;
 //get the scanner class and use the util package to obtain the input of primitive types like int, double, float, etc
 import java.util.Scanner;
 

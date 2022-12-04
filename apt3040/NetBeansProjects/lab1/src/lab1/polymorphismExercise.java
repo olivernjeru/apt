@@ -1,4 +1,4 @@
-package oopwithjava;
+package lab1;
 
 public class polymorphismExercise {
     public static void main (String[] args){
