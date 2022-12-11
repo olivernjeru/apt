@@ -18,7 +18,7 @@ public class UpdInsDelSel {
 
     public  void dbInsert(String imemID, String imemName, String imemBenefits) {
         try {
-            st.executeUpdate("insert into memberbenefits (memID, memName, memBenefits) values ('"+imemID+"','"+imemName+"','"+imemBenefits+"')");
+            st.executeUpdate("INSERT INTO memberbenefits (memID, memName, memBenefits) values ('"+imemID+"','"+imemName+"','"+imemBenefits+"')");
             JOptionPane.showMessageDialog(null, "Member Record Successfully Added");
          } 
         catch (SQLException e) {
