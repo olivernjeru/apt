@@ -1,7 +1,7 @@
 # Quiz 2
 
 * Explain the following java terms:
-** Static
+* * Static
 <p>Static in java means that a particular member belongs to a type of itself, rather than to an instance of that type. It belongs to a class but it does not belong to an instance of that class and it can be called without the instance or object or object of that class</p>
 ** Abstract
 <p>Abstract in java is used in classes to restrict a class not to be used to create objects and to access it, it must be inherited from another class. Abstract in java is also used in methods which can only be used in an abstract class and it does not have a body. The body is provided by a subclass inherited from.</p>
