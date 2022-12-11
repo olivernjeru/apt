@@ -1,6 +1,6 @@
-package lab1;
+package Labs;
 
-public class countWithDoWhile {
+public class CountWithDoWhile {
     public static void main (String [] args) {
         int num = 10, counter = 1;
         do {

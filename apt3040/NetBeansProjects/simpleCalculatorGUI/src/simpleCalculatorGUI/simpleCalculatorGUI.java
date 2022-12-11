@@ -1,7 +1,8 @@
+package simpleCalculatorGUI;
 
-public class calculatorGUI extends javax.swing.JFrame {
+public class simpleCalculatorGUI extends javax.swing.JFrame {
 
-    public calculatorGUI() {
+    public simpleCalculatorGUI() {
         initComponents();
     }
 
@@ -124,7 +125,7 @@ public class calculatorGUI extends javax.swing.JFrame {
           num1=Integer.parseInt(txtnumber1.getText());
           num2=Integer.parseInt(txtnumber2.getText());
           total=num1+num2;
-//          lbltotal.setText(Integer.toString(total));
+//        lbltotal.setText(Integer.toString(total));
           txtarea1.append(Integer.toString(total)+"\n");
     }//GEN-LAST:event_btncalculateActionPerformed
 
@@ -145,20 +146,22 @@ public class calculatorGUI extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(calculatorGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(simpleCalculatorGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(calculatorGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(simpleCalculatorGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(calculatorGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(simpleCalculatorGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(calculatorGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(simpleCalculatorGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            new calculatorGUI().setVisible(true);
+            new simpleCalculatorGUI().setVisible(true);
         });
     }
 

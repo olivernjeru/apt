@@ -1,11 +1,11 @@
-package lab1;
+package Labs;
 import java.util.Scanner;
 
-public class nestedLoops {
+public class NestedLoops {
 //    main method
     public static void main (String [] myString){
         int num,j = 0, i = 0;
-        for(j=1; j<=5; j++) {
+        for(j = 1; j <= 5; j++) {
             System.out.println("Please enter the number of values you wanna work with: ");
             Scanner n = new Scanner(System.in);
             num = n.nextInt();

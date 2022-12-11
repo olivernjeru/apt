@@ -1,7 +1,7 @@
-package lab1; //name of the package that houses this file
+package Labs; //name of the package that houses this file
 import java.util.Scanner; //import the scanner class used to get user input
 
-public class compare { //create compare class
+public class Compare { //create Compare class
     public static void main (String [] args) //declare main function
     {
         int firstNum, secondNum; //declare the int variables firstNum and secondNum

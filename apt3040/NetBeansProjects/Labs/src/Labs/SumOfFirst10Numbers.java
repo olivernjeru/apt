@@ -1,7 +1,7 @@
-package lab1;
+package Labs;
 import java.util.Scanner;
 
-public class sumOfFirst10Numbers {
+public class SumOfFirst10Numbers {
     public static void main (String [] args) {
         int n, i = 0;
         Scanner input = new Scanner(System.in);

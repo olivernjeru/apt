@@ -1,12 +1,6 @@
-package lab1;
+package Labs;
 
-public class polymorphismExercise {
-    public static void main (String[] args){
-        polymorphismExercise(12.0, 6.0);
-        polymorphismExercise(8, 4);
-        polymorphismExercise(5, 2.0);
-        polymorphismExercise(4.0, 3);
-    }
+public class PolymorphismExercise {
     public static void polymorphismExercise(double ti, double it){
         double res;
         res=ti/it;
@@ -26,5 +20,11 @@ public class polymorphismExercise {
         double res3;
         res3=d1/ld;
         System.out.println("Integer and Double Division Result is: "+res3);
+    }
+    public static void main (String[] args){
+        polymorphismExercise(12.0, 6.0);
+        polymorphismExercise(8, 4);
+        polymorphismExercise(5, 2.0);
+        polymorphismExercise(4.0, 3);
     }
 }

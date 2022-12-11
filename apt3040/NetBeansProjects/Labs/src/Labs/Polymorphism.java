@@ -1,12 +1,6 @@
-package lab1;
+package Labs;
 
-public class polymorphism {
-    public static void main (String[] args){
-        polymorphism(6);
-        polymorphism(8.0);
-        polymorphism(5, 2.0);
-        polymorphism(4.0, 3);
-    }
+public class Polymorphism {
     public static void polymorphism(int i){
         int ti;
         ti=i*3;
@@ -30,5 +24,11 @@ public class polymorphism {
         ti1=i1*3;
         td1=d1*3;
         System.out.println("Integer Double: "+td1+""+ti1);
+    }
+    public static void main (String[] args){
+        polymorphism(6);
+        polymorphism(8.0);
+        polymorphism(5, 2.0);
+        polymorphism(4.0, 3);
     }
 }

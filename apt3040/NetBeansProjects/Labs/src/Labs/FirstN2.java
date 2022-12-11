@@ -1,4 +1,4 @@
-package lab1;
+package Labs;
 //import scanner class and util package so as to be able to get input from user in primitive data types such as int, float, double, etc
 import java.util.Scanner;
 

@@ -1,5 +1,5 @@
 
-package lab1;
+package Labs;
 
 public class NestedForProgram {
     public static void main (String [] args) {
