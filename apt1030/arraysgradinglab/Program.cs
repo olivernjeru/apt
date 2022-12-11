@@ -21,7 +21,7 @@ namespace arraysgradinglab
             {
                 Console.Write("Enter student {0} score:", i + 1);
                 a[i] = Convert.ToInt32(Console.ReadLine());
-                sum += a[i]; 
+                sum += a[i];
             }
             avg = sum / n;
             if (avg > 100) grade = "Error!";
@@ -41,9 +41,6 @@ namespace arraysgradinglab
             Console.WriteLine("The Class Mean Score = {0}\n\n", avg);
             Console.WriteLine("The Class Mean Grade = {0}\n\n", grade);
             Console.ReadKey();
-
-
-
         }
     }
 }

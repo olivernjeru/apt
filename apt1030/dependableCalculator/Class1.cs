@@ -1,4 +1,4 @@
-﻿namespace ClassLibrary1
+﻿namespace dependableCalculator
 {
     public class Class1
     {

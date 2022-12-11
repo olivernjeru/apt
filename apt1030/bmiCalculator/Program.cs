@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-/*class Project
+/*class bmiCalculator
 {
     struct student
     {
@@ -113,7 +113,7 @@ using System.Threading.Tasks;
 
 
 
-class Project2
+class bmiCalculator2
 {
 
     class Student
