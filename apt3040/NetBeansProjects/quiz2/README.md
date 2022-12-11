@@ -12,7 +12,7 @@
     * Referenced Data Type
         <p>Reference data type in java include Strings where they store a reference to the object rather than the object itself. An example of this is when you assign a string variable to another variable, it copies the reference to the object but not the object itself.</p>
 
-* Write a java program that asks user to enter 6 positive integers,  stores integers in an array, squares the numbers and displays the total of squares of numbers.
+* <a href="">Write a java program that asks user to enter 6 positive integers,  stores integers in an array, squares the numbers and displays the total of squares of numbers.</a>
 ```
 package quiz;
 
@@ -45,7 +45,7 @@ public class Quiz {
 }
 ```
 
-* Write a java polymorphic program that cubes float, double and integer numbers user enters.
+* <a href="">Write a java polymorphic program that cubes float, double and integer numbers user enters.</a>
 ```
 package quiz;
 

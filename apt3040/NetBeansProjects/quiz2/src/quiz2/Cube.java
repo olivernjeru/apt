@@ -1,17 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package quiz;
+package quiz2;
 
 import java.util.Scanner;
 
-/**
- *
- * @author olive
- */
-public class cube {
+public class Cube {
     public static void cubeNumber(float sd)
     {
         float smalldecimal;
@@ -39,7 +30,7 @@ public class cube {
         bigdecimal=bd * bd * bd;
         System.out.println("The cube of " + bd + " is " + bigdecimal);
     }
-    public static void main(String[] args) 
+    public static void main(String[] args)
     {
         cubeNumber(0f);
         cubeNumber(0);
