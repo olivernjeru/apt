@@ -32,9 +32,9 @@
         <ul>Has activity/action</ul>
         <ul>Has note/comment symbol</ul>
     * UML Full Class Diagrams
-        <ul>Has three partitions:</ul>
+        <p>Has three partitions:</p>
             <ul>Name</ul>
-            * Attributes
+            <ul>Attributes</ul>
             <ul>Methods</ul>
     * Use Case Diagrams
         <ul>Has subsystem name</ul>
