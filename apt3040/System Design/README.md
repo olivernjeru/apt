@@ -1,7 +1,7 @@
 # System Design
 
 * Aggregation
-    * This is an illustration of Aggregation in a UML Class Diagram
+    * Aggregation is a specialised form of association that defines a one-way relationship which specifies a 'has-a' relationship between two classes. An example of this you can say is a wallet has money. However, the money does not need a wallet in order to exist, so the relationship is one-way.The image below is an illustration of Aggregation in a UML Class Diagram
         <img src="assets/AggregationUMLClassDiagram.png">
 * Bank Use Case Diagram
     * This is an illustration of a small feature in a Bank Use Case Diagram
