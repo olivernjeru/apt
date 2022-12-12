@@ -43,10 +43,10 @@
         <ul>Has association name</ul>
 
 * A Successful Scenario for borrowing a book at the library
-    <p>User goes to the Library</p>
-    <p>Library is Open</p>
-    <p>User goes to shelf to get book</p>
-    <p>User picks book</p>
-    <p>User gives book to librarian</p>
-    <p>Librarian records book record update</p>
-    <p>Librarian gives book to the user</p>
+    * User goes to the Library
+    * Library is Open
+    * User goes to shelf to get book
+    * User picks book
+    * User gives book to librarian
+    * Librarian records book record update
+    * Librarian gives book to the user
