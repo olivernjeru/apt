@@ -33,9 +33,9 @@
         <ul>Has note/comment symbol</ul>
     * UML Full Class Diagrams
         <ul>Has three partitions:</ul>
-            * Name
+            <ul>Name</ul>
             * Attributes
-            * Methods
+            <ul>Methods</ul>
     * Use Case Diagrams
         <ul>Has subsystem name</ul>
         <ul>Has actor name</ul>
