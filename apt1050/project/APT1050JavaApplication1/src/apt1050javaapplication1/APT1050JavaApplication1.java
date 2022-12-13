@@ -8,13 +8,13 @@ import java.sql.ResultSet;
 
 public class APT1050JavaApplication1 {
 
-public static void main(String[] args) { 
-        
+public static void main(String[] args) {
+
     Connection conn = null;
 
     Statement stmt = null;
     ResultSet rs = null;
-    
+
     try {
         conn =
         DriverManager.getConnection("jdbc:mysql://localhost:3306/myusiudb?" + "user=root&password=");
@@ -65,7 +65,6 @@ public static void main(String[] args) {
             stmt = null;
         }
     }
-      
+
 }
-    
 }

@@ -1,0 +1,17 @@
+
+org 100h
+
+START:
+MOV AX, 00H
+MOV BX, 0000H
+MOV CX, 0
+MOV SI,AX
+MOV DI,BX
+MOV BP,CX
+END
+
+ret
+
+
+
+
