@@ -47,7 +47,7 @@ void display() {
    drawTranslatedDiamond(0.0,  0.0);
 //=====================
 //Translate by 200 by 200 and draw again
-   //drawTranslatedDiamond(96.0, 0.0);
+   drawTranslatedDiamond(96.0, 0.0);
    //drawTranslatedDiamond(96.0, 100.0);
    //drawTranslatedDiamond(0.0, 100.0);
 //=====================
