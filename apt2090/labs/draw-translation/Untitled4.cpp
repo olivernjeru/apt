@@ -47,14 +47,16 @@ void display() {
    drawTranslatedDiamond(0.0,  0.0);
 //=====================
 //Translate by 200 by 200 and draw again
-   drawTranslatedDiamond(96.0, 0.0);
-   //drawTranslatedDiamond(96.0, 100.0);
-   //drawTranslatedDiamond(0.0, 100.0);
+   drawTranslatedDiamond(100.0, 100.0);
+   drawTranslatedDiamond(200, 200.0);
+   drawTranslatedDiamond(300, 300.0);
+   drawTranslatedDiamond(400, 400.0);
+   drawTranslatedDiamond(500, 500.0);
+   drawTranslatedDiamond(600, 600.0);
+   drawTranslatedDiamond(700, 700.0);
+   drawTranslatedDiamond(800, 800.0);
+   drawTranslatedDiamond(900, 900.0);
 //=====================
-   
-   
-
-
 
 }
 /* Main function: GLUT runs as a console application starting at main() */
