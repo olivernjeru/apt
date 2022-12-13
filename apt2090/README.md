@@ -52,12 +52,12 @@
 ## Simple Animations
 * Rotating Rectangles
 
-    <video src="labs/assets/animation-via-idle-function.mp4"/>
+    https://user-images.githubusercontent.com/51198797/207347066-04b591f3-2aa8-45c6-88c3-67fe6208c2ab.mp4
 
     <a href="https://github.com/olivernjeru/apt/tree/main/apt2090/labs/create-rotating-rectangles-animation/Untitled4.cpp">Code</a>
 
 * Bouncing Ball Animation
 
-    <video src="labs/assets/bouncing-ball.mp4"/>
+    https://user-images.githubusercontent.com/51198797/207347373-4e4424ba-3f87-4c4b-bcd6-d6e23f476541.mp4
 
     <a href="https://github.com/olivernjeru/apt/tree/main/apt2090/labs/create-bouncing-ball-animation/Untitled4.cpp">Code</a>
