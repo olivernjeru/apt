@@ -11,7 +11,16 @@
         <img src="assets/GradingUMLActivityDiagram.png">
 * Printer UML Class Diagram
     * This is an illustration of Inheritance and Aggregation implemented in a printer's UML Class Diagram
-        <img src="assets/PrinterUMLClassDiagram">
+        <img src="assets/PrinterUMLClassDiagram.png">
+* Activity Diagram for a Client Computer Requesting for a Webpage from the Web
+    * Illustration
+        <img src="assets/activity-diagram-for-a-client-computer-requesting-for-a-webpage-from-the-web.png">
+* Class Diagram for Mobile Money Transfer System
+    * Illustration
+        <img src="assets/class-diagram-for-mobile-money-transfer-system.png">
+* Activity Diagram for a Student Admission to a Computing Course at a Kenyan University
+    * Illustration
+        <img src="assets/activity-diagram-for-a-student-admission-to-a-computing-course-at-a-kenyan-university.png">
 * Notes
     * UML Xtics
         <ul>Has diagrams used for analysis and design</ul>
