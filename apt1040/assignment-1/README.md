@@ -1,8 +1,6 @@
 # A HTML Assignment 1
 
-Your job is to create a web site that shows the following elements. Make sure all of your code is arranged properly and cleanly. This is comparable to
-a test so I will NOT be giving very much help if any. For this first assignment you will have the tutorial to use for help, so it will be your main
-tool.
+Your job is to create a web site that shows the following elements. Make sure all of your code is arranged properly and cleanly. This is comparable to a test so I will NOT be giving very much help if any. For this first assignment you will have the tutorial to use for help, so it will be your main tool.
 
 All of this information can be found in HTML
 Make sure your page has some kind of common theme/topic, not just random stuff!
