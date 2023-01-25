@@ -11,3 +11,4 @@ Create an HTML document with the following elements:
 Using the below webpage as a guide, achieve the following by ensuring your web page has the following:
 * A top navigation bar.
 * Have two images move on the screen with a scroll amount, direction and behavior
+![image](https://user-images.githubusercontent.com/51198797/214550729-46b076b3-926f-4c23-9fd3-d86aafe64c8d.png)
