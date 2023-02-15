@@ -1,32 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML Form Lab Exercise 1</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1 align="center">Henry's Petfood Hideaway</h1>
-    <section  style="display: flex;">
-        <div class="shipping-address">
-            <form action="#">
-                <h2>Shipping Address</h2>
-                <label for="name">Name:</label>
-                <input type="text" name="name" id="nameInput">
-                <label for="name"></label>
-                <label for="name"></label>
-                <label for="name"></label>
-                <label for="name"></label>
-                <label for="name"></label>
-                <label for="name"></label>
-            </form>
+    <form action="#">
+      <h2 align="center">Order Form</h2>
+      <section style="display: flex">
+        <div class="shipping-address" style="margin-right: 1%">
+          <h2 align="center">Shipping Address</h2>
+          <label for="name">Name:</label>
+          <input type="text" name="name" id="nameInput" />
+          <br />
+          <br />
+          <label for="name">Address:</label>
+          <input type="text" name="address" id="addressInput" size="30" />
+          <br />
+          <br />
+          <label for="name">City:</label>
+          <input type="text" name="city" id="cityInput" size="6" />
+          <label for="name">State:</label>
+          <select name="state" id="state">
+            <option value="chooseAState">Choose a State</option>
+            <option value="New York">New York</option>
+            <option value="Baltimore">Baltimore</option>
+            <option value="Miami">Miami</option>
+          </select>
+          <label for="name">ZipCode:</label>
+          <input type="text" name="zipcode" id="zipcodeInput" size="4" />
+          <br />
+          <br />
+          <label for="name">Telephone:</label>
+          <input type="text" name="telephone" id="telephoneInput" size="14" />
+          <label for="name">Email:</label>
+          <input type="text" name="email" id="emailInput" size="14" />
         </div>
-        <div class="order-form">
-            <form action="#">
-                <h2>Order</h2>
-            </form>
+        <div class="order">
+          <h2 align="center">Billing Address</h2>
+          <label for="name">Name:</label>
+          <input type="text" name="name" id="nameInput" />
+          <br />
+          <br />
+          <label for="name">Address:</label>
+          <input type="text" name="address" id="addressInput" size="30" />
+          <br />
+          <br />
+          <label for="name">City:</label>
+          <input type="text" name="city" id="cityInput" size="6" />
+          <label for="name">State:</label>
+          <select name="state" id="state">
+            <option value="chooseAState">Choose a State</option>
+            <option value="New York">New York</option>
+            <option value="Baltimore">Baltimore</option>
+            <option value="Miami">Miami</option>
+          </select>
+          <label for="name">ZipCode:</label>
+          <input type="text" name="zipcode" id="zipcodeInput" size="4" />
+          <br />
+          <br />
+          <label for="name">Telephone:</label>
+          <input type="text" name="telephone" id="telephoneInput" size="14" />
+          <label for="name">Email:</label>
+          <input type="text" name="email" id="emailInput" size="14" />
         </div>
-    </section>
-</body>
+      </section>
+      <div id="products-to-order">
+        <h1>Products to Order</h1>
+        <table border="1">
+          <tr>
+            <td align="center" style="padding: 15px;"><b>Item</b></td>
+            <td align="center" style="padding: 15px"><b>Quantity</b></td>
+            <td width="10px" style="padding: 0px"><b>Repeat Order</b></td>
+            <td style="padding: 10px"><b>Price</b></td>
+            <td width="69px"><b>Ext. Cont</b></td>
+          </tr>
+          <tr>
+            <td>Puppy Chow</td>
+            <td>
+              <select name="select" id="selectQuantity">
+                <option value="Choose a quantity">Choose a quantity</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </td>
+            <td>
+              <input type="checkbox" name="repeatOrder" id="repeatOrder" />
+            </td>
+            <td>@1.50ea</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Dog Food</td>
+            <td>
+              <select name="select" id="selectQuantity">
+                <option value="Choose a quantity">Choose a quantity</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </td>
+            <td>
+              <input type="checkbox" name="repeatOrder" id="repeatOrder" />
+            </td>
+            <td>@0.25ea</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Treats</td>
+            <td>
+              <select name="select" id="selectQuantity">
+                <option value="Choose a quantity">Choose a quantity</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </td>
+            <td>
+              <input type="checkbox" name="repeatOrder" id="repeatOrder" />
+            </td>
+            <td>@0.30ea</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>More Treats</td>
+            <td align="center">Yes<input type="checkbox" name="yes" id="yes" /></td>
+            <td></td>
+            <td>@0.3ea</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="right" colspan="4"><b>6.25% Sales Tax</b></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td colspan="4">
+              <div class="shipping-method" align="center">
+                <label for="shippingMethod"><b>Shipping Method:</b></label>
+                <select name="select" id="select">
+                  <option value="choose-a-shipping-method">
+                    Choose a Shipping Method
+                  </option>
+                  <option value="in-state">In State</option>
+                  <option value="out-state">Out State</option>
+                </select>
+              </div>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="right" colspan="4"><b>Total:</b></td>
+            <td></td>
+          </tr>
+        </table>
+        <label for="totalSale">Total Sale:</label>
+        <input type="text" name="totalSale" id="totalSale" />
+      </div>
+      <br>
+      <br>
+      <br>
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+    </form>
+  </body>
 </html>
