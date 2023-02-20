@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\olive\\source\\repos\\project\\project.csproj",
+      "projectUniqueName": "C:\\Users\\olive\\Desktop\\github-repositories\\apt\\apt1030\\bmiCalculator\\project.csproj",
       "projectName": "project",
-      "projectPath": "C:\\Users\\olive\\source\\repos\\project\\project.csproj",
+      "projectPath": "C:\\Users\\olive\\Desktop\\github-repositories\\apt\\apt1030\\bmiCalculator\\project.csproj",
       "packagesPath": "C:\\Users\\olive\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\olive\\source\\repos\\project\\obj\\",
+      "outputPath": "C:\\Users\\olive\\Desktop\\github-repositories\\apt\\apt1030\\bmiCalculator\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\olive\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -60,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.309\\RuntimeIdentifierGraph.json"
       }
     }
   }
