@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body {
+background-image: url(assets/bicycle-in-the-woods.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+h1 {
+    max-width: 600px;
+    margin: auto;
+    text-align: justify;
+}
+
+/* .links a{
+    display: none;
+    margin: 10px;
+}
+
+button:hover .links a{
+    position: absolute;
+    display: block;
+    margin: 10px;
+} */
+
+button {
+    margin: 15px;
+    padding: 5px;
+    background-color: blue;
+}
+.dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 5px;
+    font-size: 5px;
+    border: none;
+  }
+
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+
+  /* Show the dropdown menu on hover */
+  .dropdown-btn:hover .dropdown-content {display: block;}
+
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}

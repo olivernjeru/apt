@@ -1,0 +1,1 @@
+![Lab](Screenshot.PNG "Lab 2 Using Colors in HTML")
