@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating a Form in HTML</title>
+</head>
+<body>
+    <form action="#" style="border-style: solid;">
+        <label for="feedback-question">
+            <b>
+                Would you give us feedback on our site?
+            </b>
+        </label>
+        <br>
+        <br>
+        <label for="name-question">
+            Can you tell us what your name is?
+        </label>
+        <input type="text" name="name" id="nameInput">
+        <br>
+        <input type="radio" name="gender" id="male">
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="female">
+        <label for="female">Female</label>
+        <br>
+        <br>
+        <label for="design-layout-rating">If you could rate the site on design, lay-out ed. What number would you give?</label>
+        <br>
+        <input type="radio" name="rating" id="1">
+        <label for="one">1</label>
+        <input type="radio" name="rating" id="2">
+        <label for="two">2</label>
+        <input type="radio" name="rating" id="3">
+        <label for="three">3</label>
+        <input type="radio" name="rating" id="4">
+        <label for="four">4</label>
+        <input type="radio" name="rating" id="5">
+        <label for="five">5</label>
+        <input type="radio" name="rating" id="6">
+        <label for="six">6</label>
+        <input type="radio" name="rating" id="7">
+        <label for="seven">7</label>
+        <input type="radio" name="rating" id="8">
+        <label for="eight">8</label>
+        <input type="radio" name="rating" id="9">
+        <label for="nine">9</label>
+        <input type="radio" name="rating" id="10">
+        <label for="ten">10</label>
+        <br>
+        <br>
+        <label for="browser-question">
+            Which browser(s) have you used to view the site? (multiple answers possible)
+        </label>
+        <br>
+        <input type="checkbox" name="chrome" id="chrome">
+        <label for="chrome">Chrome</label>
+        <br>
+        <input type="checkbox" name="opera" id="opera">
+        <label for="opera">Opera</label>
+        <br>
+        <input type="checkbox" name="internet-explorer" id="internet-explorer">
+        <label for="internet-explorer">Internet Explorer (IE)</label>
+        <br>
+        <input type="checkbox" name="mozilla-firefox" id="mozilla-firefox">
+        <label for="mozilla-firefox">Mozilla Firefox</label>
+        <br>
+        <input type="checkbox" name="epic" id="epic">
+        <label for="epic">EPIC</label>
+        <br>
+        <input type="checkbox" name="safari" id="safari">
+        <label for="safari">Safari</label>
+        <br>
+        <br>
+        <label for="general-feedback">General Feedback (comment):</label>
+        <br>
+        <textarea name="feedback" id="feedback" cols="40" rows="5" style="overflow-x: scroll; resize: none; overflow-y: scroll;"></textarea>
+        <br>
+        <br>
+        <button type="submit">Submit Answers</button>
+        <br>
+        <br>
+        <p><b>Thank you for your time!</b></p>
+    </form>
+    <caption align="bottom">Figure 1: Using forms for capturing information from users</caption>
+</body>
+</html>

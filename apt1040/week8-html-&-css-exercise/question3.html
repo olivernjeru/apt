@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="send.php" method="post">
+      <label for="car-type"
+        ><b>What kind of car would you like to buy?</b></label
+      >
+      <br />
+      <br />
+      <input
+        type="radio"
+        name="car-type-input"
+        id="Proton"
+        value="Proton"
+        checked
+      />
+      <label for="proton">Proton</label>
+      <input type="radio" name="car-type-input" id="Honda" value="Honda" />
+      <label for="honda">Honda</label>
+      <input type="radio" name="car-type-input" id="Ferari" value="Ferari" />
+      <label for="ferari">Ferari</label>
+      <input type="radio" name="car-type-input" id="Ford" value="Ford" />
+      <label for="ford">Ford</label>
+      <br />
+      <br />
+      <label for="car-color"><b>What color do you want on your car?</b></label>
+      <br />
+      <br />
+      <select name="black" id="black">
+        <option value="black">Black</option>
+        <option value="red">Red</option>
+        <option value="carbon">Carbon</option>
+      </select>
+      <label for="other">Other:</label>
+      <input type="text" name="otherInpit" id="otherInput" />
+      <br />
+      <br />
+      <label for="car-specs"
+        ><b>Enter other specification of your preferred car: </b></label
+      >
+      <br />
+      <br />
+      <textarea
+        name="car-specifications"
+        id="car-specs"
+        cols="40"
+        rows="5"
+        style="resize: none; overflow-y: scroll"
+      ></textarea>
+      <br />
+      <br />
+      <label for="get-in-touch"
+        ><b>Tell us how to get in touch with you:</b></label
+      >
+      <br />
+      <br />
+      <label for="name">Name</label>
+      <input type="text" name="name" id="nameInput" />
+      <br />
+      <label for="e-mail">E-mail</label>
+      <input type="text" name="e-mailInput" id="e-mailInput" />
+      <br />
+      <label for="tel">Tel</label>
+      <input type="text" name="tel" id="tel" />
+      <br />
+      <br />
+      <p>
+        <input type="checkbox" name="contact" id="contact-checkbox" />
+        Please contact me as soon as possible regarding this matter.
+        <br />
+        My email:
+        <a href="mailto:ezmir.razali@mmu.edu.my">ezmir.razali@mmu.edu.my</a>
+      </p>
+      <br />
+      <button type="submit">Send</button>
+      <button type="reset">Clear</button>
+      <br />
+      <br />
+      <a href="index.html">Back to Main Page</a>
+    </form>
+  </body>
+</html>
