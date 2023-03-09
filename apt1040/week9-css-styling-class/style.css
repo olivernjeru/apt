@@ -1,0 +1,19 @@
+h3, h4 {
+    background-color: yellow;
+}
+
+button {
+    padding: 20px;
+    border-radius: 10%;
+}
+
+img {
+    height: 100px;
+    width: 120px;
+    box-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+img:hover{
+    margin-top: -5px;
+    cursor: pointer;
+}
