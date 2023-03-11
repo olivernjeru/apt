@@ -12,10 +12,19 @@ df1 <-Employee_dataset
 View(df1)
 head(df1)
 #1.Scatter plot color by gender
-Plot1<- ggplot(data=df1, mapping=aes(x=salary, y=educ, col=gender))+geom_point()
+Plot1<- ggplot(data=df1, 
+               mapping=aes(x=salary, 
+                           y=educ, 
+                           col=gender))+
+                geom_point()
 Plot1
 #2.Diffentiate gender by shapes
-Plot2<- ggplot(data=df1, mapping=aes(x=salary, y=educ, col=gender,shape=gender))+geom_point()
+Plot2<- ggplot(data=df1, 
+               mapping=aes(x=salary, 
+                           y=educ, 
+                           col=gender,
+                           shape=gender))+
+                geom_point()
 Plot2
 #3.Use smoothing function
 Plot3<- ggplot(data=df1, 
@@ -36,6 +45,7 @@ Plot4<- ggplot(data=df1,
                 geom_point() + 
                 geom_smooth(color = "tomato") + 
                 theme_dark()
+                #theme_light()
 
 Plot4
 #5.Add alpha
@@ -44,7 +54,7 @@ Plot5<- ggplot(data=df1,
                            y=educ,
                           col=gender,
                           shape=gender))+ 
-                geom_point(alpha=0.6) + 
+                geom_point(alpha=0.7) + 
                 geom_smooth(color = "tomato") 
 
 Plot5
@@ -86,14 +96,14 @@ Plot9=ggplot(data = df1,
                   geom_violin(color="tomato")
 Plot9
 
-ggplotly(Plot8)
-
 #10.rectangles
 Plot10<-ggplot(df1, 
                aes(x = educ, 
                    y = salary)) +
                     geom_tile(linetype="twodash" ) + 
                     ggtitle("raster") + 
-                    theme_dark()
+                    theme_dark() + 
+                    theme(plot.title = element_text(hjust = 0.5))
+
 Plot10
 
