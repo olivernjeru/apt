@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript and integers</title>
+</head>
+<script>
+    var firstNumber, secondNumber, number1, number2, sum, length, width, radius;
+    const pi = 3.14;
+    firstNumber = window.prompt("Enter the first number: ");
+    secondNumber = window.prompt("Enter the second number: ");
+    length = window.prompt("Enter the length of a rectangle: ");
+    width = window.prompt("Enter the width of a rectangle: ");
+    radius = window.prompt("Enter the radius of a circle: ");
+
+    number1 = parseInt(firstNumber);
+    number2 = parseInt(secondNumber);
+    number3 = parseInt(length);
+    number4 = parseInt(width);
+    number5 = parseInt(radius);
+
+    sum = number1 + number2;
+
+    prod = number1 * number2;
+
+    modulus = number1 % 2;
+
+    circleArea = pi * (number5 * number5);
+    rectangleArea = number3 * number4;
+
+    document.writeln("<h1> The Sum of the two numbers is</h1>" + " " + sum);
+    document.writeln("<h1> The Product of the two numbers is</h1>" + " " + prod);
+    document.writeln("<h1> The Modulus of the two numbers is</h1>" + " " + modulus);
+    document.writeln("<h1> The area of a rectangle is</h1>" + " " + rectangleArea);
+    document.writeln("<h1> The area of a circle is</h1>" + " " + circleArea);
+</script>
+<body>
+    <p>This file is a Calculator</p>
+</body>
+</html>

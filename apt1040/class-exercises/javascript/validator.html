@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Validation Example</title>
+	<script>
+		function validateForm() {
+			// Get input values
+			var email = document.forms["myForm"]["email"].value;
+			var phone = document.forms["myForm"]["phone"].value;
+
+			// Regular expression patterns for email and phone number validation
+			var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+			var phonePattern = /^\d{10}$/;
+
+			// Check if email and phone are valid
+			if (!emailPattern.test(email)) {
+				alert("Please enter a valid email address.");
+				return false;
+			}
+			if (!phonePattern.test(phone)) {
+				alert("Please enter a valid 10-digit phone number.");
+				return false;
+			}
+			return true;
+		}
+	</script>
+</head>
+<body>
+	<form name="myForm" onsubmit="return validateForm()">
+		<label for="email"><b>Email:</b></label>
+		<input type="email" id="email" name="email" required>
+		<br>
+        <br>
+		<label for="phone"><b>Phone Number:</b></label>
+		<input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+		<br>
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>

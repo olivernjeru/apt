@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Using JavaScript</title>
+  </head>
+  <script>
+    document.write(
+      "<h1><center>welcome to Website dynamism using JavaScript</center></h1>"
+    );
+    // window.alert("This is interesting");
+    function validateForm() {
+      const fName = document.forms["nameform"]["fName"].value;
+      const lName = document.forms["nameform"]["lName"].value;
+
+      if (fName === "") {
+        alert("First Name must be filled out");
+        return false;
+      }
+      if (lName === "") {
+        alert("Last Name must be filled out");
+        return false;
+      }
+      return true;
+    }
+  </script>
+  <body>
+    <p>The following link has javascript code</p>
+    <a
+      href="https://www.google.com"
+      onMouseover="window.alert('you will search using google, click here to google')"
+      >Click here to search using google</a
+    >
+    <br />
+    <br />
+    <a href="" onclick="window.alert('We won, haha, lame')"
+      >Click here for a terribe easter egg</a
+    >
+    <br />
+    <br />
+    <form name="nameform" onsubmit="return validateForm()>
+      <label for="fName"> <b>Enter your First Name: </b></label>
+      <input type="text" name="fname" id="fName" />
+      <br />
+      <br />
+      <label for="lName"> <b>Enter your Last Name: </b></label>
+      <input type="text" name="lname" id="lName" />
+      <br />
+      <br />
+      <input
+        type="button"
+        value="Go"
+        onClick="window.alert('Hello ' + document.nameform.fname.value + ' ' + document.nameform.lname.value)"
+      />
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
