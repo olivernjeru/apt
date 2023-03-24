@@ -6,9 +6,9 @@ library(ggplot2)
 library(dplyr)
 library(hrbrthemes)
 library(viridis)
-library(plotly)
-#Geoms in ggplot
-df1 <-Employee_dataset
+  library(plotly)
+  #Geoms in ggplot
+  df1 <-survey_data
 View(df1)
 head(df1)
 #1.Scatter plot color by gender
@@ -80,11 +80,11 @@ Plot7<- ggplot(data=df1,
 Plot7
 #8.Plotly
 #Jitter
-Plot8=ggplot(data = df1, 
-             aes(x = gender,
-                 y = salary,
-                 col=jobcat, 
-                 shape=gender)) + 
+Plot8<-ggplot(data = df1, 
+             aes(x = sex,
+                 y = weight,
+                 col=species_id, 
+                 shape=sex)) + 
                 geom_jitter()
 Plot8
 ggplotly(Plot8)
