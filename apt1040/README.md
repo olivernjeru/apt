@@ -16,3 +16,49 @@ Have a graph that shows the stock performance based off the information provided
 
 Create a Website that stores Financial Literacy Information and is able to display this information to the user each time they want to see it.
 Financial Literacy includes definition of Long, Short, Investment Bank, Asset Management, Companies & or Firms in the Finance world, Hedge Funds, Tickers Definition, things that are traded, basically what I learned in the Finance Accelerator Programme and Investment Bank Trading Academy
+
+FINWIZKID
+Features
+    Login/out
+    Sign up
+
+Users
+    admin
+        adds content
+        updates content
+        deletes content
+    regular user
+        views content
+
+DB Architecture
+    Investing
+        Stocks
+        Bonds
+        Fixed Income
+        Mutual Funds
+        ETFs
+        Options
+        401 (K)
+        Roth IRA
+        Fundamental Analysis
+        Technical Analysis
+        Markets
+    Economy
+        Government Policy
+        Monetary Policy
+        Fiscal Policy
+    Personal Finance
+        Financial Literacy
+        Retirement
+        Budgeting
+        Saving
+        Taxes
+        Home Ownership
+    News
+        Markets
+        Companies
+        Earnings
+        Economy
+        Crypto
+        Personal Finance
+        Government
