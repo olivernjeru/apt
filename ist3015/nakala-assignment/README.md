@@ -34,3 +34,15 @@ D. Build a model. Share the model performance results. Justify your choice of ev
 • Question C – 10 points
 • Question D – 40 points
 • Presentation Quality (20 points)
+
+## Nakala points from the lecturer
+Data Explorer
+Plots for conclusion
+Do correlation
+Do EDA
+based on descretion
+use ml models to predict depending on the data types
+get your predictor variable for the ml model prediction
+rmse
+
+work on time

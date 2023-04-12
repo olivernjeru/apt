@@ -1,0 +1,7 @@
+<? xml version="1.0" encoding="UTF-8"?>
+<!--this tells the version of the XML file-->
+<note>
+<to>Sam</to>
+<from>Lawrence</from>
+<message>Reminder, don’t forget</message>
+</note>

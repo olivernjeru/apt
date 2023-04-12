@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>XML</title>
+  </head>
+  <body>
+    <h1>This is a simple XML file</h1>
+    <! - -Declaring sections where the data shall be embedded into our HTML from the XML file -->
+    <div>
+      <b> TO: </b><span id="to"> </span><br />
+      <b> FROM: </b><span id="from"> </span><br />
+      <b> Message: </b><span id="message"> </span><br />
+    </div>
+    <!—writing a script that will help to open the XML file and embed data- ->
+    <script>
+      if (window.XMLHttpRequest) {
+        xmlhttp = new XMLHttpRequest();
+        //code for IE7+, firefox, chrome, Safari,Opera
+      } else {
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        // code for IE6 , IE5
+      }
+      xmlhttp.open("GET", "note.xml", false); //will open the XML file
+      xmlhttp.send(); //will send the request to the xml file
+      xmlDoc = xmlhttp.responseXML;
+      document.getElementById("to").innerHTML =
+        xmlDoc.getElementsByTagName("to")[0].childNodes[0].nodeValue;
+      document.getElementById("from").innerHTML =
+        xmlDoc.getElementsByTagName("from")[0].childNod;
+      es[0].nodeValue;
+      document.getElementById("message").innerHTML =
+        xmlDoc.getElementsByTagName("message")[0].ch;
+      ildNodes[0].nodeValue;
+    </script>
+  </body>
+</html>
