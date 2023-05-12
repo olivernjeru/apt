@@ -12,6 +12,8 @@
     margin-right: 20px;
     border: solid #0a192f;
     background-color: hotpink;
+    border-radius: 30px;
+    padding: 2%;
 }
 
 body {
