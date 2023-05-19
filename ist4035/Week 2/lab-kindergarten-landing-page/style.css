@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    padding: 2%
+}
+
+body {
+    background-color: #d828c1;
+    color: #00ffc8
+}
