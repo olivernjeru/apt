@@ -22,6 +22,14 @@ h3 {
     width: 13%;
 }
 
+#top button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: #ffffff;
+}
+
 #overlay-tile {
     position: absolute;
     top: 25%;
