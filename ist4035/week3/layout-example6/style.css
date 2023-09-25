@@ -1,0 +1,25 @@
+#header {
+    height: 5rem;
+    width: 100%;
+    background-color: blue;
+}
+
+#left {
+    height: 30rem;
+    width: 20%;
+    background-color: red;
+    float: left;
+}
+
+#right {
+    height: 30rem;
+    width:100%;
+    background-color: green;
+}
+
+#footer {
+    height: 5rem;
+    width: 100%;
+    background-color: pink;
+    clear: both;
+}
