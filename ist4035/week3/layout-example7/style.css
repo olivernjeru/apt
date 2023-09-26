@@ -4,27 +4,25 @@
     width: 100%;
 }
 
-#content {
-    width: 100%;
-    display: flex;
-}
-
 #left {
     width: 20%;
     background-color: green;
     height: 30rem;
+    float: left;
 }
 
 #center {
     width: 60%;
     background-color: aqua;
     height: 30rem;
+    float: left;
 }
 
 #right {
     width: 20%;
     background-color: brown;
     height: 30rem;
+    float: left;
 }
 
 #footer {
