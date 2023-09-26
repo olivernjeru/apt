@@ -1,0 +1,23 @@
+body {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+div {
+    height: 10rem;
+    width: 33.3%;
+}
+
+#one {
+    background-color: blue;
+}
+
+#two {
+   background-color: orange;
+   margin: auto;
+}
+
+#three {
+   background-color: green;
+   float: right;
+}

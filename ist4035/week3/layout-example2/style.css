@@ -1,0 +1,18 @@
+div {
+    height: 10em;
+    width: 50%;
+    float: right;
+}
+
+#one {
+    background-color: yellow;
+}
+
+#two {
+    background-color: blue;
+    height: 20em;
+}
+
+#three {
+    background-color: green;
+}
