@@ -1,0 +1,16 @@
+div {
+    height: 5em;
+    width: 50%;
+    background-color: green;
+    margin-bottom: 2em;
+}
+
+.fancy {
+    box-shadow: 10px 10px 10px black;
+    border: black 3px groove;
+    border-radius: 0.5em;
+}
+
+div:not(.fancy) {
+    background-color: red;
+}
