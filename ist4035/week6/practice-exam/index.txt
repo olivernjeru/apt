@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice exam</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        #columns {
+            display: flex;
+        }
+
+        #left,
+        #right {
+            height: 100vh;
+            width: 50%;
+        }
+
+        #left {
+            background-color: blue;
+        }
+
+        #right {
+            background-color: red;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+        <div id="proverb">
+            <h1>Actions speak louder than words.</h1>
+        </div>
+      <div id="columns">
+        <div id="left"></div>
+        <div id="right"></div>
+      </div>
+    </div>
+  </body>
+</html>
