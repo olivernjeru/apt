@@ -1,0 +1,13 @@
+div {
+    height: 5em;
+    width: 50%;
+    background-color: green;
+}
+
+div:hover {
+    cursor: pointer;
+}
+
+div:active {
+    background-color: blue;
+}
