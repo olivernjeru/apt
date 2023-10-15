@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <CheckBoxPreference
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:defaultValue="true"
+        android:key="perform_updates"
+        android:summary="Enable or disable data updates"
+        android:title="Enable Updates" />
+    <ListPreference
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:defaultValue="1000"
+        android:dependency="perform_updates"
+        android:entries="@array/updateInterval"
+        android:entryValues="@array/updateIntervalValues"
+        android:key="update_interval"
+        android:summary="Define how often updates will be performed"
+        android:title="Updates Interval" />
+    <EditTextPreference
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:defaultValue="Default welcome message"
+        android:dialogMessage="Provide a message"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:key="welcome_message"
+        android:summary="Define the welcome message to be shown"
+        android:title="Welcome message"
+        android:dialogTitle="Welcome Message" />
+</PreferenceScreen>

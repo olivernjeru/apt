@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">NameEntry_USIU</string>
+    <string name="name">Enter your name</string>
+    <string name="btn_message">Next</string>
+    <string name="btn2_message">Do not press</string>
+
+    <string name="messageGreetings">Habari</string>
+    <string name="doNotMessage">I told you not tap me</string>
+</resources>

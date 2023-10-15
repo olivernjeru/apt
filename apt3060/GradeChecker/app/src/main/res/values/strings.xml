@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">HelloUSIU</string>
+    <string name="markMessage">Your mark is: </string>
+</resources>

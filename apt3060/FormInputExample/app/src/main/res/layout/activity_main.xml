@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DataInput">
+
+    <TextView
+        android:id="@+id/NamePrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/namePrompt"
+        android:textColor="@color/purple_500"
+        android:textSize="23sp" />
+
+    <EditText
+        android:id="@+id/NameInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text=""
+        android:textColor="@color/purple_500" />
+
+    <TextView
+        android:id="@+id/DOBPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dobPrompt"
+        android:textColor="@color/purple_500"
+        android:textSize="23sp" />
+
+    <DatePicker
+        android:id="@+id/DOBInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner" />
+
+    <TextView
+        android:id="@+id/EmailPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/emailPrompt"
+        android:textSize="23sp"
+        android:textColor="@color/purple_500"/>
+
+    <EditText
+        android:id="@+id/EmailInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="" />
+
+    <Button
+        android:id="@+id/NextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:text="@string/btnNext" />
+
+</LinearLayout>

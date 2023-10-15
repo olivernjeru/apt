@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Mark_if</string>
+    <string name="markMessage">Your Mark is:\n\n</string>
+</resources>
