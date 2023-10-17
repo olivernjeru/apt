@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trendy School</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+
+      :root {
+        --primary-color: #0d98ba;
+        --secondary-color: #008080;
+        --teriary-color: #0000ff;
+      }
+
+      nav {
+        height: 10vh;
+        background-color: var(--primary-color);
+        display: flex;
+        align-items: center;
+      }
+      nav a {
+        text-decoration: none;
+        font-size: 25px;
+        padding: 10px 5px 5px 10px;
+        color: #fff;
+      }
+
+      body {
+        height: 90vh;
+        background-image: url("https://drive.google.com/uc?export=view&id=1cwb0LppsF0DGC3omkrIBuXizmbxEbGgi");
+        background-repeat: no-repeat;
+        z-index: -1;
+        color: var(--primary-color);
+      }
+
+      h2 {
+        color: var(--secondary-color);
+      }
+
+      form {
+        padding: 10px;
+        margin: 5px;
+        float: right;
+      }
+
+      .form-input {
+        display: block;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="date"],
+      input[type="tel"],
+      textarea,
+      button {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid var(--teriary-color);
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      @media (max-width: 768px) {
+        body {
+          background-image: none;
+          background-color: var(--secondary-color);
+          color: #fff;
+        }
+
+        h2 {
+          color: #fff;
+        }
+
+        form {
+          float: none;
+          max-width: 100%;
+          margin: auto;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        input[type="tel"],
+        textarea,
+        button {
+          display: block;
+          margin-bottom: 8px;
+          padding: 8px;
+        }
+      }
+      @media (max-width: 465px) {
+        form {
+          margin: 5% 0% 0% 5%;
+        }
+
+        h2 {
+          font-size: 18px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        input[type="tel"],
+        textarea,
+        button {
+          font-size: 10px;
+        }
+      }
+    </style>
+  </head>
+  <header>
+    <nav>
+      <a href="#">Trendy School</a>
+    </nav>
+  </header>
+  <body>
+    <form action="#">
+      <h2>Student Information</h2>
+      <div class="form-input">
+        <label for="StudentName">Student Name</label>
+        <input type="text" name="StudentName" id="SName" placeholder="John Doe" />
+      </div>
+
+      <div class="form-input">
+        <label for="DateOfBirth">Date Of Birth</label>
+        <input type="date" name="DateOfBirth" id="DOB" />
+      </div>
+
+      <div class="form-input">
+        <label for="Gender">Gender</label>
+        <input type="text" name="Gender" id="SGender" placeholder="Male/Female/Other" />
+      </div>
+
+      <div class="form-input">
+        <label for="ContactInformation">Contact Information</label>
+        <input type="tel" name="ContactInformation" id="SContactInfo" placeholder="+254712345678" />
+      </div>
+
+      <div class="form-input">
+        <label for="EmergencyContact">Emergency Contact</label>
+        <input type="tel" name="EmergencyContact" id="SEmergencyContact" placeholder="+254712345678" />
+      </div>
+
+      <div class="form-input"></div>
+      <h2>Parent/Guardian Information</h2>
+      <div class="form-input">
+        <label for="ParentGuardianName">Parent/Guardian Name</label>
+        <input type="text" name="ParentGuardianName" id="PGName" placeholder="Jane Doe" />
+      </div>
+
+      <div class="form-input">
+        <label for="ParentGuardianContactInformation"
+          >Parent/Guardian Contact Information</label
+        >
+        <input
+          type="tel"
+          name="ParentGuardianContactInformation"
+          id="PGContactInfo"
+          placeholder="+254712345678"
+        />
+      </div>
+
+      <h2>Educational History</h2>
+      <div class="form-input">
+        <label for="PreviousSchoolInformation"
+          >Previous School Information</label
+        >
+        <textarea
+          id="SPreviousSchoolInformation"
+          name="PreviousSchoolInformation"
+          cols="40"
+          rows="7"
+          placeholder="I went to x school from ..."
+        ></textarea>
+      </div>
+
+      <h2>Health and Demographic Information</h2>
+      <div class="form-input">
+        <label for="MedicalInformation">Medical Information</label>
+        <textarea
+          name="MedicalInformation"
+          id="SMedicalInformation"
+          cols="40"
+          rows="7"
+          placeholder="Weight: xkg Height: xcm Blood type: xx ..."
+        ></textarea>
+      </div>
+
+      <div class="form-input">
+        <label for="Language">Language</label>
+        <input type="text" name="Language" id="SLanguage" placeholder="English/Swahili/Other"/>
+      </div>
+
+      <div class="form-input">
+        <label for="NationalityRace">Nationality/Race</label>
+        <input type="text" name="NationalityRace" id="SNationalityRace" placeholder="Kenyan/Other"/>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
