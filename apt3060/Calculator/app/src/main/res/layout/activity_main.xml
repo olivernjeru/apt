@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editTextCalculator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Values"
+        android:inputType="text"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp" />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:rowCount="5"
+        android:layout_marginTop="8dp">
+
+        <!-- Row 1 -->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="appendToCalculator"
+            android:text="@string/seven"
+            android:layout_marginRight="4dp"
+            android:textColor="@color/btn_color" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="appendToCalculator"
+            android:text="@string/eight"
+            android:layout_marginRight="4dp"
+            android:textColor="@color/btn_color"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="appendToCalculator"
+            android:text="@string/nine"
+            android:layout_marginRight="4dp"
+            android:textColor="@color/btn_color"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="appendToCalculator"
+            android:text="@string/divide"
+            android:textColor="@color/btn_color"/>
+
+        <!-- Row 2 -->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="appendToCalculator"
+            android:text="@string/four"
+            android:layout_marginRight="4dp"
+            android:textColor="@color/btn_color"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="appendToCalculator"
+            android:text="@string/five"
+            android:layout_marginRight="4dp"
+            android:textColor="@color/btn_color" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="appendToCalculator"
+            android:text="@string/six"
+            android:layout_marginRight="4dp"
+            android:textColor="@color/btn_color" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="appendToCalculator"
+            android:text="@string/multiply"
+            android:textColor="@color/btn_color" />
+
+        <!-- Row 3 -->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="appendToCalculator"
+            android:text="@string/one"
+            android:layout_marginRight="4dp"
+            android:textColor="@color/btn_color" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="appendToCalculator"
+            android:text="@string/two"
+            android:layout_marginRight="4dp"
+            android:textColor="@color/btn_color" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="appendToCalculator"
+            android:text="@string/three"
+            android:layout_marginRight="4dp"
+            android:textColor="@color/btn_color" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="appendToCalculator"
+            android:text="@string/subtract"
+            android:textColor="@color/btn_color" />
+
+        <!-- Row 4 -->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="clearCalculator"
+            android:text="@string/clear"
+            android:layout_marginRight="4dp"
+            android:textColor="@color/btn_color" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="appendToCalculator"
+            android:text="@string/zero"
+            android:layout_marginRight="4dp"
+            android:textColor="@color/btn_color" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="calculateResult"
+            android:text="@string/equal"
+            android:layout_marginRight="4dp"
+            android:textColor="@color/btn_color" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="appendToCalculator"
+            android:text="@string/add"
+            android:textColor="@color/btn_color" />
+    </GridLayout>
+</LinearLayout>
