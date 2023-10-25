@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MidSemExamPractical</string>
+    <string name="textView">Please enter your name, age and time(in 24hours)</string>
+</resources>
