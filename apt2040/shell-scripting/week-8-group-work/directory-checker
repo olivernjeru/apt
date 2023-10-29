@@ -1,0 +1,5 @@
+#/bin/bash
+
+#3. Write a shell script that creates a new directory. Check existence of the new directory made using ls command.
+CREATENEWDIRECTORY = $(mkdir new-directory)
+

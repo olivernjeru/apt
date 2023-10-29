@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#2. Write a shell script to get the current date, time, username and current working directory.
+
+CURRENTDATETIME=$(date +"%Y-%m-%d %H:%M:%S")
+
+USERNAME=$(whoami)
+
+CURRENTDIRECTORY=$(pwd)
+
+echo "The current date and time: $CURRENTDATETIME"
+echo "The username is: $USERNAME"
+echo "The current working directory is: $CURRENTDIRECTORY"

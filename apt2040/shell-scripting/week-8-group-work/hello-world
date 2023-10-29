@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#1a. Write a shell script that prints “Shell Scripting is Fun!” on the screen
+echo "Shell Scripting is Fun!"
+
+#b. Modify the shell script from exercise 1 to include a variable. The variable will hold the contents of the message “Shell Scripting is Fun!”
+PHRASE = "Shell Scripting is Fun!"
+
+echo $PHRASE

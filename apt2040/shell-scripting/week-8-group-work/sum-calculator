@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "This program is a calculator that adds two numbers, num1 and num 2."
+
+echo "Please enter num1: "
+read NUM1
+
+echo "Please enter num2: "
+read NUM2
+
+SUM = $(($NUM1 + $NUM2))
+
+echo "The sum of $NUM1 and $NUM2 is $SUM"
