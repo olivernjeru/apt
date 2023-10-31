@@ -1,5 +1,16 @@
 #/bin/bash
 
 #3. Write a shell script that creates a new directory. Check existence of the new directory made using ls command.
-CREATENEWDIRECTORY = $(mkdir new-directory)
 
+# Define the name of the new directory
+MYDIRECTORY="my_directory"
+
+if [ -d "$MYDIRECTORY" ]; then
+    echo "The directory $MYDIRECTORY already exists."
+else
+    mkdir "$MYDIRECTORY"
+    echo "$MYDIRECTORY has been created."
+fi
+
+echo "The contents of this directory are:"
+ls
