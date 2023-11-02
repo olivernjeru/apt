@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 4</title>
+  </head>
+  <body id="body">
+    <h1 id="demo">Hello World</h1>
+    <input
+      type="button"
+      value="click me"
+      id="clickMeBtn"
+      onclick="changeHeading()"
+    />
+
+    <input
+      type="button"
+      value="background changer"
+      id="clickMe"
+      onclick="changeBackground()"
+    />
+    <p>Welcome to the world of DOM, hope you like it.</p>
+
+    <script>
+      let isClicked = false;
+
+      function changeHeading() {
+        if (isClicked) {
+          heading.innerHTML = "Powered by the DOM";
+        } else {
+          heading.innerHTML = "Hello World";
+        }
+        isClicked = !isClicked;
+      }
+
+      function changeBackground() {
+        let isPressed = false;
+        var heading = document.getElementById("demo");
+        var body = document.querySelector("body")
+        if (body.style.backgroundColor=="white") {
+            body.style.backgroundColor="blue";
+            body.style.color="white";
+
+        } else if (body.style.backgroundColor=="blue") {
+            body.style.backgroundColor="white";
+            body.style.color="black";
+        }
+        isPressed = !isPressed;
+      }
+      }
+    </script>
+  </body>
+</html>

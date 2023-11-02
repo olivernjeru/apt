@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 2</title>
+
+  </head>
+  <body>
+    <h1 id="demo" onmouseover="changeHello()" onmouseout="changePower()">
+      Hello World
+    </h1>
+    <p>Welcome to the world of DOM, hope you like it.</p>
+  </body>
+
+  <script>
+    var hello = document.getElementById("demo");
+
+    function changeHello() {
+      // var hello = document.getElementById("demo");
+      hello.innerHTML = "Powered by the DOM.";
+    }
+
+    function changePower() {
+      // var hello = document.getElementById("demo");
+      hello.innerHTML = "Hello World";
+    }
+
+  </script>
+</html>

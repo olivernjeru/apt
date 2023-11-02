@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 3</title>
+  </head>
+  <body>
+    <h1 id="demo">Hello World</h1>
+    <input
+      type="button"
+      value="click me"
+      id="clickMeBtn"
+      onclick="changeHeading()"
+    />
+    <p>Welcome to the world of DOM, hope you like it.</p>
+
+    <script>
+      var heading = document.getElementById("demo");
+      let isClicked = false;
+      var counter = 0;
+
+      function changeHeading() {
+
+        if (isClicked) {
+          heading.innerHTML = "Powered by the DOM";
+        } else {
+          heading.innerHTML = "Hello World";
+        }
+        isClicked = !isClicked;
+      }
+    </script>
+  </body>
+</html>
