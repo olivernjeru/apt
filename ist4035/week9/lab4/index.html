@@ -34,20 +34,17 @@
         isClicked = !isClicked;
       }
 
-      function changeBackground() {
-        let isPressed = false;
-        var heading = document.getElementById("demo");
-        var body = document.querySelector("body")
-        if (body.style.backgroundColor=="white") {
-            body.style.backgroundColor="blue";
-            body.style.color="white";
+      let isPressed = false;
 
-        } else if (body.style.backgroundColor=="blue") {
-            body.style.backgroundColor="white";
-            body.style.color="black";
+      function changeBackground() {
+        if (!isPressed) {
+          body.style.backgroundColor = "blue";
+          body.style.color = "white";
+        } else {
+          body.style.backgroundColor = "white";
+          body.style.color = "black";
         }
         isPressed = !isPressed;
-      }
       }
     </script>
   </body>
