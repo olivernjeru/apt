@@ -17,18 +17,11 @@
   </body>
   <script>
     const banner = document.getElementById("banner");
-    const colorStore = [
-      (banner.style.backgroundColor = "red"),
-      (banner.style.backgroundColor = "green"),
-      (banner.style.backgroundColor = "yellow"),
-      (banner.style.backgroundColor = "pink"),
-      (banner.style.backgroundColor = "aqua"),
-    ];
-
+    const colorStore = ["red", "green", "yellow", "pink", "aqua", "purple"];
     let cIndex = 0;
 
-    function setBannerColor () {
-        banner.style.backgroundColor = colorStore[cIndex];
+    function setBannerColor() {
+      banner.style.backgroundColor = colorStore[cIndex];
     }
 
     function nextIndex() {
