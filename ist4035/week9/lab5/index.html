@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 5</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="banner">
+      <h1>This is only the beginning ...</h1>
+    </div>
+    <div id="buttons">
+      <input type="button" value="previous" onclick="prevIndex()" />
+      <input type="button" value="next" onclick="nextIndex()" />
+    </div>
+  </body>
+  <script>
+    const banner = document.getElementById("banner");
+    const colorStore = ["red", "green", "yellow", "pink", "aqua", "purple"];
+    let cIndex = 0;
+
+    function setBannerColor() {
+      banner.style.backgroundColor = colorStore[cIndex];
+    }
+
+    function nextIndex() {
+      cIndex = (cIndex + 1) % colorStore.length;
+      setBannerColor();
+    }
+
+    function prevIndex() {
+      cIndex = (cIndex - 1 + colorStore.length) % colorStore.length;
+      setBannerColor();
+    }
+
+    setBannerColor();
+  </script>
+</html>
