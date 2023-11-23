@@ -32,4 +32,4 @@ function addStudent() {
 
 addStudent();
 viewStudents();
-// connection.end(); //NB: if running a server, remove this line
+connection.end(); //NB: if running a server, remove this line
