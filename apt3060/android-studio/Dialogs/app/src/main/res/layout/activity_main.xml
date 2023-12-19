@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--    alert dialog box-->
+<LinearLayout
+    android:id="@+id/LinearLayout01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/btnGo"
+        android:text="@string/btnGo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </Button>
+
+    <EditText
+        android:id="@+id/txtMsg"
+        android:hint="@string/click_the_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+    </EditText>
+
+    </LinearLayout>

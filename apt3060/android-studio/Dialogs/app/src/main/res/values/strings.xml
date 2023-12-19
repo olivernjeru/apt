@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Dialogs</string>
+    <string name="btnGo">Go</string>
+    <string name="click_the_button">Click the button</string>
+</resources>
