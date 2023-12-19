@@ -1,0 +1,15 @@
+D:\StackLayoutTutorial\StackLayoutTutorial\bin\Debug\netstandard2.0\StackLayoutTutorial.deps.json
+D:\StackLayoutTutorial\StackLayoutTutorial\bin\Debug\netstandard2.0\StackLayoutTutorial.dll
+D:\StackLayoutTutorial\StackLayoutTutorial\bin\Debug\netstandard2.0\ref\StackLayoutTutorial.dll
+D:\StackLayoutTutorial\StackLayoutTutorial\bin\Debug\netstandard2.0\StackLayoutTutorial.pdb
+D:\StackLayoutTutorial\StackLayoutTutorial\obj\Debug\netstandard2.0\StackLayoutTutorial.csproj.AssemblyReference.cache
+D:\StackLayoutTutorial\StackLayoutTutorial\obj\Debug\netstandard2.0\StackLayoutTutorial.GeneratedMSBuildEditorConfig.editorconfig
+D:\StackLayoutTutorial\StackLayoutTutorial\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\StackLayoutTutorial\StackLayoutTutorial\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+D:\StackLayoutTutorial\StackLayoutTutorial\obj\Debug\netstandard2.0\StackLayoutTutorial.AssemblyInfoInputs.cache
+D:\StackLayoutTutorial\StackLayoutTutorial\obj\Debug\netstandard2.0\StackLayoutTutorial.AssemblyInfo.cs
+D:\StackLayoutTutorial\StackLayoutTutorial\obj\Debug\netstandard2.0\StackLayoutTutorial.csproj.CoreCompileInputs.cache
+D:\StackLayoutTutorial\StackLayoutTutorial\obj\Debug\netstandard2.0\XamlC.stamp
+D:\StackLayoutTutorial\StackLayoutTutorial\obj\Debug\netstandard2.0\StackLayoutTutorial.dll
+D:\StackLayoutTutorial\StackLayoutTutorial\obj\Debug\netstandard2.0\refint\StackLayoutTutorial.dll
+D:\StackLayoutTutorial\StackLayoutTutorial\obj\Debug\netstandard2.0\StackLayoutTutorial.pdb

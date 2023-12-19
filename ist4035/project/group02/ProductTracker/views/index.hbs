@@ -1,0 +1,113 @@
+<div class="container-fluid">
+    <main class="col-md-10 mx-auto col-lg-8 px-md-4">
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+            style="background-color: #3A7756; color: #FFFFFF;">
+            <h1 class="h2">Product Tracker</h1>
+        </div>
+
+        <div class="btn-toolbar mb-2 mb-md-0">
+            <div class="btn-group me-2">
+                <button id="new-sale-modal-btn" type="button" class="btn btn-primary"
+                    style="background-color: #3A7756; color:#FFFFFF;">Add Sale</button>
+            </div>
+        </div>
+
+        {{!-- Product tracker chart --}}
+        <canvas class="my-4 w-100" id="productTracker" width="900" height="400"></canvas>
+
+        {{!-- Show case all the product sales --}}
+        <div class="table-responsive">
+            <table class="table table-striped table-sm sales-table">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Units Sold</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</div>
+
+<!-- New sale modal -->
+<div class="modal fade new-sale-modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <form id="new-sale-form" action="#" method="dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Add Sale Data</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <label class="form-label" for="price">Units Sold</label>
+                    <input class="form-control" name="price" id="price" type="number"><br><br>
+
+                    <label class="form-label" for="date">Date</label><br><br>
+                    <input class="form-control" type="date" id="date" name="date">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" id="new-sale-submit" class="btn btn-primary"
+                        style="background-color:#3A7756">Add Sale</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Update Sale Modal -->
+<div class="modal fade update-sale-modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <form id="update-sale-form" action="#" method="dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Update Sal Data</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <label class=" form-label" for="price">Units Sold</label>
+                    <input class="form-control modal-price" name="price" id="price" type="number"><br><br>
+
+                    <label class="form-label" for="date">Date</label><br><br>
+                    <input class="form-control modal-date" type="date" name="date" id="date">
+
+                    <input type="hidden" class="modal-id" name="modal-id">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" id="new-sale-submit" class="btn btn-primary"
+                        style="background-color:#3A7756">Update Sale</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+{{!-- Toast for showing messages to user about state of things --}}
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="liveToast" class="toast" data-bs-delay="3000" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <strong class="me-auto">Task Completed Successfully</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            Hello, there! This is a toast message.
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@^2"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment@^1"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
