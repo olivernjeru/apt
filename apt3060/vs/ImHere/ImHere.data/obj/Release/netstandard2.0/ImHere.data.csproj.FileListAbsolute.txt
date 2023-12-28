@@ -1,0 +1,10 @@
+D:\ImHere\ImHere.data\bin\Release\netstandard2.0\ImHere.data.deps.json
+D:\ImHere\ImHere.data\bin\Release\netstandard2.0\ImHere.data.dll
+D:\ImHere\ImHere.data\bin\Release\netstandard2.0\ImHere.data.pdb
+D:\ImHere\ImHere.data\obj\Release\netstandard2.0\ImHere.data.csproj.AssemblyReference.cache
+D:\ImHere\ImHere.data\obj\Release\netstandard2.0\ImHere.data.GeneratedMSBuildEditorConfig.editorconfig
+D:\ImHere\ImHere.data\obj\Release\netstandard2.0\ImHere.data.AssemblyInfoInputs.cache
+D:\ImHere\ImHere.data\obj\Release\netstandard2.0\ImHere.data.AssemblyInfo.cs
+D:\ImHere\ImHere.data\obj\Release\netstandard2.0\ImHere.data.csproj.CoreCompileInputs.cache
+D:\ImHere\ImHere.data\obj\Release\netstandard2.0\ImHere.data.dll
+D:\ImHere\ImHere.data\obj\Release\netstandard2.0\ImHere.data.pdb

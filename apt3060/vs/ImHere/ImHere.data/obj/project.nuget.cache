@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "B4pin5L/CW1B+Eoj1XI2HhtYKZlL5ixq9cUb9orxfQQfABSHMq7lk97OesLscWTKgkBUN1+bpZqC5cuEme2oxg==",
+  "success": true,
+  "projectFilePath": "D:\\ImHere\\ImHere.data\\ImHere.data.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\olive\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\olive\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
