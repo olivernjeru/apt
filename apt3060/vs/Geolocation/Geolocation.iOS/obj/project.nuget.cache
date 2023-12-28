@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "BR8g/0ba6/Ggz0GAvmRLdnM7przqX58ZC7kbVM0kSUspda9gOoFBk+Pop9m+0DZvI1fGjX5x7TYXmed7gdiFzw==",
+  "success": true,
+  "projectFilePath": "D:\\Geolocation\\Geolocation.iOS\\Geolocation.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\olive\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\olive\\.nuget\\packages\\xamarin.essentials\\1.8.0\\xamarin.essentials.1.8.0.nupkg.sha512",
+    "C:\\Users\\olive\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
+}

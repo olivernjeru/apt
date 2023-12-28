@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneWord", "PhoneWord.csproj", "{3D3ED2F3-64F1-45CA-8764-9F5A64812A92}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E0163250-8184-425B-BA46-8F0C6026300C}"
+	ProjectSection(SolutionItems) = preProject
+		Activity.cs = Activity.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D3ED2F3-64F1-45CA-8764-9F5A64812A92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D3ED2F3-64F1-45CA-8764-9F5A64812A92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D3ED2F3-64F1-45CA-8764-9F5A64812A92}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{3D3ED2F3-64F1-45CA-8764-9F5A64812A92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D3ED2F3-64F1-45CA-8764-9F5A64812A92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D3ED2F3-64F1-45CA-8764-9F5A64812A92}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5C6D85C8-6D5C-4693-BB28-E8C5AE12C777}
+	EndGlobalSection
+EndGlobal
