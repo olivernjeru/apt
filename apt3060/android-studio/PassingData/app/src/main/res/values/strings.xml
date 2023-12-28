@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">PassingData</string>
+    <string name="click_to_go_to_second_activity">Click to go to Second Activity</string>
+    <string name="welcome_to_the_second_activity">Welcome to the Second Activity</string>
+    <string name="click_to_go_to_main_activity">Click to go to Main Activity</string>
+</resources>

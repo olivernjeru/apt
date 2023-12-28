@@ -1,3 +1,0 @@
-PhoneWord.MainActivity, PhoneWord;crc6462e5192813842c21.MainActivity
-PhoneWord.MainActivity;crc6462e5192813842c21.MainActivity
-phoneword.MainActivity;crc6462e5192813842c21.MainActivity

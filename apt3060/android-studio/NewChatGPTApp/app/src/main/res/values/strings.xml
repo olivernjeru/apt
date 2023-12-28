@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">ChatGPTApp</string>
-    <string name="gptQuestion">Question</string>
-    <string name="gptResponse">Response</string>
-
-</resources>
