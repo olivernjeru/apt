@@ -11,13 +11,13 @@ void setup()
 
 void loop()
 {
-    int A=digitalRead(4);
-    Serial.print("A=");
-    Serial.println(A);
-    int B=digitalRead(5);
-    Serial.print("B=");
-    Serial.println(B);
-    digitalWrite(2,A^B); //Co
-    digitalWrite(3,A&B); //S
-    Serial.println();
+  int A = digitalRead(4);
+  Serial.print("A=");
+  Serial.println(A);
+  int B = digitalRead(5);
+  Serial.print("B=");
+  Serial.println(B);
+  digitalWrite(2, A ^ B); // Co
+  digitalWrite(3, A & B); // S
+  Serial.println();
 }
