@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Degree Program</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Choose Your Degree Program</h1>
+    <div class="button-container">
+      <button onclick="selectProgram('IST')">IST (Information Systems & Technology)</button>
+      <button onclick="selectProgram('APT')">APT (Applied Computer Technology)</button>
+    </div>
+  </div>
+
+  <script>
+    function selectProgram(program) {
+      // Redirect to the results page with the selected program
+      window.location.href = "results.html?program=" + program;
+    }
+  </script>
+
+</body>
+</html>
