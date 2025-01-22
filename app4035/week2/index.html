@@ -1,73 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to APP4035</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to APP4035</title>
 
-    <!-- MDC Web (Material Components Web) CSS -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@material/web@latest/dist/material-web.min.css">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f5f5f5;
+    }
 
-    <!-- Optional: MDC Web JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/@material/web@latest/dist/material-web.min.js"></script>
+    .welcome-card {
+      width: 400px;
+      padding: 24px;
+      text-align: center;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
 
-    <!-- Custom styling -->
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #fafafa;
-        }
+    .welcome-card h1 {
+      color: #3f51b5;
+    }
 
-        .welcome-container {
-            text-align: center;
-            background-color: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .welcome-container h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .welcome-container p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-        }
-
-        .welcome-container button {
-            padding: 10px 20px;
-            font-size: 1rem;
-            cursor: pointer;
-            background-color: #6200ea;
-            color: white;
-            border: none;
-            border-radius: 4px;
-        }
-
-        .welcome-container button:hover {
-            background-color: #3700b3;
-        }
-    </style>
+    .welcome-button {
+      margin-top: 16px;
+    }
+  </style>
 </head>
-
 <body>
-
-    <div class="welcome-container">
-        <h1>Welcome to APP4035: Web Application Development Frameworks!</h1>
-        <p>We're excited to have you on board for this course. Get ready to learn and grow!</p>
-        <button>Start Learning</button>
-    </div>
-
+  <div class="welcome-card">
+    <h1>Welcome to APP4035</h1>
+    <p>We are excited to have you in this course. Let's learn and grow together!</p>
+    <button
+      class="welcome-button mui-button mui-button--contained"
+      onclick="alert('Welcome to APP4035!')"
+    >
+      Start Learning
+    </button>
+  </div>
 </body>
-
 </html>
