@@ -2,14 +2,18 @@ import styles from "./page.module.css";
 import Greeter from "./components/Greeter";
 import Clock from "./components/Clock";
 import UpdatedClock from "./components/UpdatedClock";
+import CatFact from "./components/CatFact";
 
 export default function Home() {
   return (
     <main className={styles.main}>
+      <div>Cat Fact</div>
+      <CatFact />
       <Greeter greeting='Hey' name='John' />
       <div className={styles.description}>
         <p>Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code></p>
+          <code className={styles.code}>src/app/page.js</code>
+        </p>
         <div>
           <h2>Clock Component that does not use a Hook (useState and or useEffect)</h2>
         </div>
