@@ -1,4 +1,4 @@
-const title = 'React';
+const title = 'John';
 
 function Greeter() {
     return (
