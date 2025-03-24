@@ -26,3 +26,5 @@ export default function About() {
         </div>
     );
 }
+
+// initially we are using an array of objects that later returns an array of list items, a HTML element, in JSX format.
