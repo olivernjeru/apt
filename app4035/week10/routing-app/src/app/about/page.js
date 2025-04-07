@@ -1,6 +1,19 @@
+"use client";
+
 import React from 'react';
+import { Carousel } from 'antd';
+import Typography from 'antd/lib/typography';
+
+const { Title, Paragraph } = Typography;
 
 export default function About() {
+    const contentStyle = {
+        height: '160px',
+        color: '#ff',
+        lineHeight: '160px',
+        textAlign: 'center',
+        background: '#364d79'
+    };
     const data = [
         {
             id: 1,
@@ -20,11 +33,17 @@ export default function About() {
     );
     return (
         <div>
-            <h1>This is the About Page</h1>
-            <p>Below are our staff members:</p>
+            <Title level={1} style={contentStyle}>This is the About Page</Title>
+            <div style={{ width: 50 + '%', margin: 'auto' }}>
+                <Carousel autoplay>
+                    <Title level={3} style={contentStyle}>1</Title>
+                    <Title level={3} style={contentStyle}>2</Title>
+                    <Title level={3} style={contentStyle}>3</Title>
+                    <Title level={3} style={contentStyle}>4</Title>
+                </Carousel>
+            </div>
+            <Paragraph>Below are our staff members:</Paragraph>
             <ul>{listItems}</ul>
         </div>
     );
 }
-
-// initially we are using an array of objects that later returns an array of list items, a HTML element, in JSX format.
