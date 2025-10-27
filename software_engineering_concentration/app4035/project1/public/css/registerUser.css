@@ -1,0 +1,44 @@
+.hb-auth-card {
+    max-width: 400px;
+    width: 100%;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hb-auth-form {
+    padding-right: 50%;
+}
+
+/* Reduce padding for smaller screens */
+@media (max-width: 992px) {
+
+    /* For tablets and smaller */
+    .hb-auth-form {
+        padding-right: 30%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* For mobile devices */
+    .hb-auth-form {
+        padding-right: 15%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* For very small screens */
+    .hb-auth-form {
+        padding-right: 5%;
+    }
+}
+
+.hb-auth-form input {
+    border-radius: 3px;
+}
+
+.hb-auth-form .input-group {
+    border-radius: 3px;
+    margin-bottom: 19px;
+}

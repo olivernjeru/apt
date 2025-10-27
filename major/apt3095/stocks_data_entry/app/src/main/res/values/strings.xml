@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">APT3095</string>
+    <string name="title">Stock Data Entry</string>
+    <string name="stockTicker">Stock Ticker</string>
+    <string name="stockQuantity">Quantity</string>
+    <string name="stockBid">Bid</string>
+    <string name="stockOffer">Offer</string>
+    <string name="btnSendQuote">Send Quote</string>
+</resources>
