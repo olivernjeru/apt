@@ -1,0 +1,133 @@
+<head>
+    <style>
+        .filter-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: -15px;
+        }
+
+        .floor-filter {
+            width: 200px;
+            margin-bottom: 2px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div style="max-height: 85vh; overflow-y: auto;">
+            {{#if error}}
+            <div class="alert alert-danger text-center">{{error}}</div>
+            {{/if}}
+
+            <!-- Request Cleaning Button -->
+            <button class="btn hb-btn-primary mb-3" id="submitCleaning" onclick="submitCleaningRequest()">Request Cleaning</button>
+
+            <table class="table table-striped hb-table">
+                <thead class="table-dark" style="position: sticky; top: 0; z-index: 1;">
+                    <tr>
+                        <th>Select</th>
+                        <th>Rooms
+                            <select id="floorFilter" class="form-select form-select-sm"
+                                style="width: auto; display: inline-block; margin-left: 5px;" onchange="filterRooms()">
+                                <option value="all">All Floors</option>
+                                <option value="1">Floor 1</option>
+                                <option value="2">Floor 2</option>
+                                <option value="3">Floor 3</option>
+                            </select>
+                        </th>
+                        <th>Cleaning Status</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    {{#each rooms}}
+                    <tr data-floor="{{this.floor}}" class="room-row">
+                        <td class="select-column room-checkbox"> <input type="checkbox" class="room-checkbox"
+                                data-room="{{this.roomNumber}}" </td>
+                        <td>{{roomNumber}}</td>
+                        <td class="status-cell">
+                            <span class="{{#if this.cleaningStatus}}
+                                        {{#if (eq this.cleaningStatus 'Needs Cleaning')}}hb-status-red{{/if}}
+                                        {{#if (eq this.cleaningStatus 'In Progress')}}hb-status-yellow{{/if}}
+                                        {{#if (eq this.cleaningStatus 'Pending')}}hb-status-pink{{/if}}
+                                        {{#if (eq this.cleaningStatus 'Cleaned')}}hb-status-green{{/if}}
+                                        {{else}}status-red{{/if}}">
+                                {{this.cleaningStatus}}
+                            </span>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+
+        
+    </div>
+
+    <script>
+        function submitCleaningRequest() {
+            // Get selected rooms
+            let selectedRooms = [];
+            document.querySelectorAll(".room-checkbox:checked").forEach(checkbox => {
+                selectedRooms.push(checkbox.dataset.room);
+            });
+
+            console.log("Selected Rooms:", selectedRooms);
+
+            if (selectedRooms.length === 0) {
+                alert("Please select at least one room.");
+                return;
+            }
+
+            // Send request to update the JSON file
+            fetch("/reception/housekeeping", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ rooms: selectedRooms })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert("Cleaning request submitted successfully!");
+                        location.reload(); // Refresh to update status
+                    } else {
+                        alert("Failed to submit request.");
+                    }
+                })
+                .catch(error => {
+                    console.error("Error submitting request:", error);
+                });
+        }
+
+
+        //Room filtering functionality
+        function filterRooms() {
+            const selectedFloor = document.getElementById("floorFilter").value;
+            console.log(`Selected Floor: ${selectedFloor}`);
+
+            document.querySelectorAll("tbody tr").forEach(row => {
+                const roomNumber = row.cells[1].textContent.trim(); // Get room number
+                const roomFloor = roomNumber.charAt(0); // Extract the first digit
+
+                if (selectedFloor === "all" || roomFloor === selectedFloor) {
+                    row.style.display = ""; // Show row
+                } else {
+                    row.style.display = "none"; // Hide row
+                }
+            });
+        }
+
+        // Attach event listener to dropdown
+        document.getElementById("floorFilter").addEventListener("change", filterRooms);
+
+        // Run filtering once at page load
+        window.onload = filterRooms;
+
+    </script>
+
+    </div>
+</body>

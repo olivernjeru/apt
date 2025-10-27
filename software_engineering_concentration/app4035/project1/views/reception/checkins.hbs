@@ -1,0 +1,113 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .hb-auth-form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hb-auth-card {
+            max-width: 400px;
+            width: 100%;
+            padding: 2rem;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-dark {
+            background-color: #000;
+            border: none;
+        }
+    </style>
+
+     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const checkinInput = document.getElementById("checkin");
+        const checkoutInput = document.getElementById("checkout");
+        const form = document.getElementById("checkinForm");
+
+        // Prevent past dates for check-in
+        const today = new Date().toISOString().split("T")[0];
+        checkinInput.setAttribute("min", today);
+
+        // Ensure check-out is after check-in
+        checkinInput.addEventListener("change", function () {
+            // Set the minimum checkout date to the day after check-in
+            const checkinDate = new Date(checkinInput.value);
+            checkinDate.setDate(checkinDate.getDate() + 1); // Add one day
+            const minCheckoutDate = checkinDate.toISOString().split("T")[0];
+            checkoutInput.setAttribute("min", minCheckoutDate);
+
+            // If checkout is before checkin, clear the checkout field
+            if (checkoutInput.value && checkoutInput.value <= minCheckoutDate) {
+                checkoutInput.value = ""; // Clear invalid checkout date
+                alert("Check-out date must be after check-in date.");
+            }
+        });
+
+        // Prevent form submission if checkout is not after checkin
+        form.addEventListener("submit", function (event) {
+            const checkinDate = new Date(checkinInput.value);
+            checkinDate.setDate(checkinDate.getDate() + 1); // Add one day
+            const minCheckoutDate = checkinDate.toISOString().split("T")[0];
+
+            if (checkoutInput.value < minCheckoutDate) {
+                alert("Check-out date must be after check-in date.");
+                event.preventDefault();
+            }
+        });
+    });
+</script>
+
+</head>
+
+<body>
+    <h1 class="hb-form-title">Check-in to Room {{room}}</h1>
+
+    <main>
+        <div>
+            <!-- Success or Error message -->
+            {{#if successMessage}}
+            <div class="alert alert-success text-center">{{successMessage}}</div>
+            {{/if}}
+            {{#if errorMessage}}
+            <div class="alert alert-danger text-center">{{errorMessage}}</div>
+            {{/if}}
+
+            <!-- Form submits a POST request to /reception/checkins -->
+            <form  id="checkinForm" class="hb-checking-form" action="/reception/checkins" method="post">
+                <div class="mb-4">
+                    <label for="fname" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="fname" name="fname"
+                        placeholder="Enter Client First name" required>
+
+                    <label for="lname" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lname" name="lname" placeholder="Enter Client Last name"
+                        required>
+
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="tel"  class="form-control"  id="phone"  name="phone"  placeholder="Enter Client Phone Number" maxlength="10" 
+                     pattern="\d{10}" title="Phone number must be exactly 10 digits" required>
+
+                    <label for="roomNo" class="form-label">Room Number</label>
+                    <input type="text" class="form-control" id="roomNo" name="roomNo" value="{{room}}" readonly required>
+
+                    <label for="checkin" class="form-label">Check-in Date</label>
+                    <input type="date" class="form-control" id="checkin" name="checkin" required>
+
+                    <label for="checkout" class="form-label">Check-out Date</label>
+                    <input type="date" class="form-control" id="checkout" name="checkout" required>
+                </div>
+                <div class="d-flex">
+                    <button type="submit" class="btn hb-btn-primary me-4">Check In</button>
+                    <a href="/reception/rooms" class="btn hb-btn-secondary">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+</body>
+
+</html>
