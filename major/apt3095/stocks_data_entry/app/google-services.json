@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "621850237243",
+    "project_id": "apt3095",
+    "storage_bucket": "apt3095.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621850237243:android:b1fed017834f13492fff1e",
+        "android_client_info": {
+          "package_name": "com.example.apt3095"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEYlkE10-wGlk6DEzM3qQhneAcRxjk_HE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621850237243:android:6b61e37bd2f46be22fff1e",
+        "android_client_info": {
+          "package_name": "com.usiu.aptproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEYlkE10-wGlk6DEzM3qQhneAcRxjk_HE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

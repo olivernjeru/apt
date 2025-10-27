@@ -1,0 +1,176 @@
+{% extends 'include/user_base.html' %}
+{% load static %}
+
+{% block pagelevelcss %}
+<link rel="stylesheet" href="{% static 'vendors/codemirror/lib/codemirror.css' %}">
+<link rel="stylesheet" href="{% static 'vendors/codemirror/theme/material.css' %}">
+<style>
+    .CodeMirror {
+        height: 600px;
+        border: 1px solid #444;
+        background-color: #263238;  /* Optional: Ensure background matches the dark theme */
+    }
+
+    .CodeMirror-annotation {
+        background-color: rgba(255, 255, 255, 0.1); /* Transparent dark annotation */
+        border-left: 3px solid #ffa726;
+        color: #fff;
+        padding: 3px;
+        margin: 2px 0;
+        font-size: 12px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="content-wrapper">
+    <div class="row">
+        <div class="col-sm-12 mb-4 mb-xl-0">
+            <h4 class="font-weight-normal mb-2" style="color: #EC37FC;">Review Results</h4>
+            {% if review_results %}
+                <div class="alert alert-success">
+                    <strong>Review successful!</strong>
+                </div>
+            {% else %}
+                <div class="alert alert-danger">
+                    <strong>No review results available.</strong>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="row flex-grow">
+        <div class="col-sm-4 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Uploaded Files</h5>
+                    <ul class="list-group mb-3" id="file-tree">
+                        {% for file_name in file_names %}
+                            <li class="list-group-item">
+                                {{ file_name }}
+                                <button class="btn btn-secondary btn-sm float-right open-file" data-filename="{{ file_name }}">Open</button>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-8 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">File Content</h5>
+                    <div id="file-content" class="code-mirror"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block pageleveljs %}
+<script src="{% static 'vendors/jquery/jquery-3.6.0.min.js' %}"></script>
+<script src="{% static 'vendors/codemirror/lib/codemirror.js' %}"></script>
+<script src="{% static 'vendors/codemirror/mode/python/python.js' %}"></script>
+<script src="{% static 'vendors/codemirror/mode/javascript/javascript.js' %}"></script>
+
+<script>
+    $(document).ready(function () {
+        const reviewResults = {{ review_results|safe }};
+        const fileContents = {{ uploaded_files|safe }};
+        console.log("Review Results:", reviewResults);
+        console.log("File Contents:", fileContents);
+
+        const fileEditor = CodeMirror(document.getElementById("file-content"), {
+            value: "",
+            mode: "text/plain",
+            lineNumbers: true,
+            readOnly: true,
+            theme: "material",  // Set the theme to 'material' for dark mode
+        });
+
+        const modeMap = {
+            'py': 'text/x-python',
+            'js': 'text/javascript',
+            'html': 'text/html',
+            'css': 'text/css',
+            'java': 'text/x-java',
+            'cpp': 'text/x-c++src',
+            'c': 'text/x-csrc',
+            'cs': 'text/x-csharp',
+            'rb': 'text/x-ruby',
+            'php': 'application/x-httpd-php',
+            'go': 'text/x-go',
+            'rs': 'text/x-rustsrc',
+            'swift': 'text/x-swift',
+            'kt': 'text/x-kotlin',
+            'ts': 'application/typescript',
+            'tsx': 'text/typescript-jsx',
+            'jsx': 'text/jsx',
+            'xml': 'application/xml',
+            'json': 'application/json',
+            'yaml': 'text/x-yaml',
+            'sh': 'text/x-sh',
+            'bat': 'application/x-bat',
+            'sql': 'text/x-sql',
+            'r': 'text/x-rsrc',
+            'pl': 'text/x-perl',
+            'lua': 'text/x-lua',
+            'scala': 'text/x-scala',
+            'hs': 'text/x-haskell',
+            'vb': 'text/x-vb',
+            'fs': 'text/x-fsharp',
+            'dart': 'application/dart',
+            'erl': 'text/x-erlang',
+            'ex': 'text/x-elixir',
+            'md': 'text/x-markdown'
+        };
+
+        document.querySelectorAll('.open-file').forEach(button => {
+            button.addEventListener('click', function() {
+                const fileName = this.getAttribute('data-filename');
+                const fileContent = fileContents[fileName] || '';
+                const fileExtension = fileName.split('.').pop();
+
+                // Update CodeMirror with the file content
+                fileEditor.setValue(fileContent);
+
+                // Set the appropriate mode based on file extension
+                const mode = modeMap[fileExtension] || 'text/plain';
+                fileEditor.setOption("mode", mode);
+
+                // Clear any previous annotations
+                clearAnnotations(fileEditor);
+
+                // Add annotations if review results are available for this file
+                if (reviewResults[fileName]) {
+                    addAnnotations(fileEditor, reviewResults[fileName]);
+                }
+            });
+        });
+
+        function clearAnnotations(editor) {
+            const lines = editor.lineCount();
+            for (let i = 0; i < lines; i++) {
+                editor.removeLineClass(i, 'background', 'CodeMirror-annotation');
+            }
+        }
+
+        function addAnnotations(editor, results) {
+            for (const [lineNumber, issues] of Object.entries(results)) {
+                const lineIndex = parseInt(lineNumber, 10) - 1;  // Convert to 0-based index
+                const message = issues.join(', ');
+
+                // Create annotation element
+                const annotation = document.createElement('div');
+                annotation.className = 'CodeMirror-annotation';
+                annotation.textContent = `⚠️ ${message}`;
+
+                // Add annotation as a line widget
+                editor.addLineClass(lineIndex, 'background', 'CodeMirror-annotation');
+                editor.addLineWidget(lineIndex, annotation, { above: true });
+            }
+        }
+    });
+</script>
+{% endblock %}

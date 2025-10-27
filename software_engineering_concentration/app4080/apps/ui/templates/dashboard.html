@@ -1,0 +1,94 @@
+{% extends 'include/user_base.html' %}
+{% load static %}
+{% block pagelevelcss %}
+<link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
+{% endblock %}
+
+{% block content %}
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-sm-12 mb-4 mb-xl-0">
+            </div>
+        </div>
+        <h4 class="font-weight-normal mb-2" style="color: #EC37FC;">Upload Code File/Zipped Folder</h4>
+        <div class="row flex-grow">
+            <div class="col-sm-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="{% url 'apps.ui:upload_code' %}"
+                              class="dropzone"
+                              id="code-dropzone">
+                              {% csrf_token %}
+                        </form>
+                        <button id="upload-button" class="btn btn-primary mt-3">Upload</button>
+
+                        <!-- Loading Indicator -->
+                        <div id="loading-indicator" style="display: none;">
+                            <p>Loading... Please wait.</p>
+                            <div class="spinner-border" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block pageleveljs %}
+<script src="{% static 'vendors/dropzone/dropzone.js' %}"></script>
+<script>
+    var myDropzone = new Dropzone("#code-dropzone", {  // Ensure the ID matches the form
+        url: '{% url "apps.ui:upload_code" %}',  // Use Django template tag to dynamically set the URL
+        paramName: 'file',
+        maxFilesize: 10,  // Maximum file size in MB
+        acceptedFiles: '.zip,.py,.js,.html,.css,.java,.cpp,.c,.cs,.rb,.php,.go,.rs,.swift,.kt,.kts,.ts,.tsx,.jsx,.xml,.json,.yaml,.yml,.sh,.bat,.sql,.r,.pl,.lua,.scala,.hs,.vb,.fs,.dart,.erl,.ex,.exs,.md',  // Allowed file types
+        autoProcessQueue: false,  // Prevent auto upload
+        maxFiles: 1,  // Allow only one file to be uploaded
+        init: function () {
+            var dz = this;  // Store the Dropzone instance
+
+            // Log when a file is added
+            dz.on("addedfile", function(file) {
+                console.log("File added: " + file.name);  // Log file name
+            });
+
+            // Handle any errors during upload
+            dz.on("error", function (file, message) {
+                console.error("Upload error: " + message);  // Log error message
+                alert("Error: " + message);
+                document.getElementById('loading-indicator').style.display = 'none'; // Hide loading indicator on error
+            });
+
+            // On successful upload
+            dz.on("success", function (file, response) {
+                console.log("File uploaded successfully: " + file.name);  // Log success message
+                // Show loading indicator before redirecting
+                document.getElementById('loading-indicator').style.display = 'block';
+                // Navigate to the results page after a short delay to show loading
+                setTimeout(function() {
+                    window.location.href = '/results/';
+                }, 1000); // Adjust delay as needed
+            });
+
+            // Optionally, remove the file from Dropzone after success
+            dz.on("complete", function (file) {
+                console.log("File upload completed: " + file.name);  // Log completion message
+                dz.removeFile(file);  // Remove the file from the Dropzone after success
+            });
+
+            // Button click event to process the queue
+            document.getElementById('upload-button').addEventListener('click', function(e) {
+                e.preventDefault();
+                if (dz.getQueuedFiles().length === 0) {
+                    alert("Please add a file to upload.");
+                } else {
+                    document.getElementById('loading-indicator').style.display = 'block'; // Show loading indicator
+                    dz.processQueue();  // Process the queue to upload the file
+                }
+            });
+        }
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'include/base.html' %}
+{% load static %}
+
+
+{% block menu %}
+    <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <div class="user-profile">
+            <div class="user-image">
+            </div>
+          </div>
+          <ul class="nav">
+            <li class="nav-item {{ upload_active }}">
+              <a class="nav-link" href="{% url 'apps.ui:dashboard' %}">
+                <i class="icon-outbox menu-icon"></i>
+                <span class="menu-title">Upload Code</span>
+              </a>
+            </li>
+              <li class="nav-item {{ history_active }}">
+              <a class="nav-link" href="{% url 'apps.ui:history' %}">
+                <i class="icon-repeat menu-icon"></i>
+                <span class="menu-title">History</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+{% endblock %}
+
+{% block content %}
+{% endblock %}

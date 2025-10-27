@@ -1,0 +1,115 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+         .hb-auth-form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .hb-auth-card {
+            max-width: 400px;
+            width: 100%;
+            padding: 2rem;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+
+        .btn-dark {
+            background-color: #000;
+            border: none;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1 class="hb-form-title">Checkout from Room {{room}}</h1>
+    <main>
+        <div>
+            <!-- Error message if needed -->
+            {{#if error}}
+            <div class="alert alert-danger text-center">{{error}}</div>
+            {{/if}}
+            <!-- Form submits a POST request to /checkouts -->
+            <form id="checkoutForm" class="hb-checking-form" action="/reception/checkouts" method="post">
+                <div class="mb-4">
+                    <label for="fname" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="fname" name="fname"
+                        value="{{guest.fname}}" readonly>
+
+
+                    <label for="lname" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lname" name="lname" value="{{guest.lname}}" readonly >
+
+
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="text" class="form-control" id="phone" name="phone"
+                        value="{{guest.phone}}" readonly>
+                    <label for="roomNo" class="form-label">Room Number</label>
+                    <input type="text" class="form-control" id="roomNo" name="roomNo"
+                        value="{{guest.roomNo}}" readonly>
+
+
+                    <label for="check-in" class="form-label">Check-in Date</label>
+                    <input type="date" class="form-control" id="check-in" name="checkin" value="{{guest.checkin}}" readonly>
+
+
+                    <label for="check-out" class="form-label">Check-out Date</label>
+                    <input type="date" class="form-control" id="check-out" name="checkout" value="{{guest.checkout}}" readonly>
+                </div>
+                <div class="d-flex">
+                    <button type="submit" class="btn hb-btn-primary checkout-btn me-4">Check out</button>
+                    <a href="/reception/rooms" class="btn hb-btn-secondary">Cancel</a>
+                </div>
+            </form>
+
+
+<script>
+
+
+const checkoutForm = document.getElementById('checkoutForm');
+
+if (checkoutForm) {
+    checkoutForm.addEventListener('submit', async (event) => {
+        event.preventDefault();  // Prevent default form submission
+
+        const roomNumber = document.getElementById('roomNo').value;  // Get room number
+        console.log("Room Number:", roomNumber);  // For debugging
+
+        try {
+            const response = await fetch('/reception/checkouts', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ roomNo: roomNumber })
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                alert(`Room ${roomNumber} checked out successfully!`);  // Show success message
+                window.location.href = '/reception/rooms';  // Redirect to /reception/rooms
+            } else {
+                alert("Error: " + result.message);  // Show error message
+            }
+        } catch (error) {
+            console.error('Checkout failed:', error);
+            alert('An error occurred. Please try again.');
+        }
+    });
+}
+
+</script>
+  </div>
+ </main>
+
+
+</body>
+
+
+</html>

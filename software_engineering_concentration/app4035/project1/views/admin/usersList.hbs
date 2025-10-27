@@ -1,0 +1,198 @@
+<div class="container-fluid">
+    <div style="max-height: 90vh; overflow-y: auto;">
+        <table class="table table-striped hb-table">
+            <thead class="table-dark" style="position: sticky; top: 0; z-index: 1;">
+                <tr>
+                    <th>Email</th>
+                    <th>
+                        Role
+                        <select id="roleFilter" class="form-select form-select-sm"
+                            style="width: auto; display: inline-block; margin-left: 5px;">
+                            <option value="all">All</option>
+                            <option value="receptionist">Receptionist</option>
+                            <option value="housekeeping">Housekeeping</option>
+                        </select>
+                    </th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each users}}
+                <tr>
+                    <td>{{this.username}}</td>
+                    <td>{{this.role}}</td>
+                    <td>
+                        <a href="/admin/edit-user?username={{this.username}}" class="btn btn-sm">
+                            <i class="bi bi-pencil-square"></i>
+                        </a>
+                        {{#unless (eq ../user.username this.username)}}
+                        <button type="button" class="btn btn-sm delete-btn" data-username="{{this.username}}">
+                            <i class="bi bi-trash"></i>
+                        </button>
+                        {{/unless}}
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Delete a User Account Confirmation Modal -->
+<div class="modal fade" id="deleteConfirmationModal" tabindex="-1" aria-labelledby="deleteConfirmationModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteConfirmationModalLabel">Confirm Deletion</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete <strong id="userEmail"></strong>?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Snackbar for Success/Error Messages -->
+<div id="snackbar" class="snackbar"></div>
+
+<script>
+    // Role filter functionality
+    document.getElementById('roleFilter').addEventListener('change', function () {
+        var filterValue = this.value.toLowerCase();
+        var rows = document.querySelectorAll('tbody tr');
+        rows.forEach(function (row) {
+            var roleCell = row.cells[1].textContent.toLowerCase();
+            if (filterValue === 'all' || roleCell === filterValue) {
+                row.style.display = '';
+            } else {
+                row.style.display = 'none';
+            }
+        });
+    });
+
+    // Delete confirmation functionality
+    document.addEventListener('DOMContentLoaded', function () {
+        const deleteButtons = document.querySelectorAll('.delete-btn');
+        const deleteModal = new bootstrap.Modal(document.getElementById('deleteConfirmationModal'));
+        const confirmDeleteBtn = document.getElementById('confirmDeleteBtn');
+        const userEmailElement = document.getElementById('userEmail');
+        const snackbar = document.getElementById('snackbar');
+        let usernameToDelete = null;
+
+        // Add event listeners to all delete buttons
+        deleteButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                usernameToDelete = button.getAttribute('data-username'); // Get the username to delete
+                const userEmail = button.closest('tr').querySelector('td').textContent; // Get the email from the table row
+                userEmailElement.textContent = userEmail; // Set the email in the modal
+                deleteModal.show(); // Show the modal
+            });
+        });
+
+        // Handle the confirmation button click
+        confirmDeleteBtn.addEventListener('click', async function () {
+            if (usernameToDelete) {
+                try {
+                    // Send a POST request to delete the user
+                    const response = await fetch('/admin/delete-user', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                        },
+                        body: `username=${encodeURIComponent(usernameToDelete)}`,
+                    });
+
+                    if (response.ok) {
+                        // Show success message
+                        showSnackbar('User deleted successfully!', 'success');
+                        // Reload the page after a short delay
+                        setTimeout(() => {
+                            window.location.reload();
+                        }, 1500);
+                    } else {
+                        // Show error message
+                        showSnackbar('Failed to delete user. Please try again.', 'error');
+                    }
+                } catch (error) {
+                    console.error('Error deleting user:', error);
+                    showSnackbar('An error occurred. Please try again.', 'error');
+                } finally {
+                    deleteModal.hide(); // Hide the modal
+                }
+            }
+        });
+
+        // Function to show snackbar messages
+        function showSnackbar(message, type) {
+            snackbar.textContent = message;
+            snackbar.className = 'snackbar show';
+            snackbar.classList.add(type); // Add success or error class
+            setTimeout(() => {
+                snackbar.className = 'snackbar';
+            }, 3000); // Hide after 3 seconds
+        }
+    });
+</script>
+
+<!-- Snackbar CSS -->
+<style>
+    .snackbar {
+        visibility: hidden;
+        min-width: 250px;
+        margin-left: -125px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        border-radius: 4px;
+        padding: 16px;
+        position: fixed;
+        z-index: 1000;
+        left: 50%;
+        bottom: 30px;
+    }
+
+    .snackbar.show {
+        visibility: visible;
+        animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    }
+
+    .snackbar.success {
+        background-color: #28a745;
+        /* Green for success */
+    }
+
+    .snackbar.error {
+        background-color: #dc3545;
+        /* Red for error */
+    }
+
+    @keyframes fadein {
+        from {
+            bottom: 0;
+            opacity: 0;
+        }
+
+        to {
+            bottom: 30px;
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeout {
+        from {
+            bottom: 30px;
+            opacity: 1;
+        }
+
+        to {
+            bottom: 0;
+            opacity: 0;
+        }
+    }
+</style>
