@@ -1,0 +1,144 @@
+<div class="container-fluid mt-3">
+    <div class="d-flex gap-3 align-items-center">
+        <label for="floorFilter" class="fw-bold">Floor:</label>
+        <select id="floorFilter" class="form-select w-auto">
+            <option value="1">Floor 1</option>
+            <option value="2">Floor 2</option>
+            <option value="3">Floor 3</option>
+        </select>
+
+        <label for="availabilityFilter" class="fw-bold">Status:</label>
+        <select id="availabilityFilter" class="form-select w-auto">
+            <option value="all">All</option>
+            <option value="Available">Available</option>
+            <option value="Occupied">Occupied</option>
+             <option value="Unavailable">Unavailable</option>
+        </select>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <!-- Message when no rooms match the filter -->
+    <div id="noRoomsMessage" class="text-center text-muted fw-bold" style="display: none;">
+    </div>
+
+    <div class="row row-cols-md-3 g-3">
+        {{#each roomDetails}}
+        {{!-- <div class="col room-card" data-floor="{{floor}}" data-status="{{roomStatus}}">
+            <div class="room-card-content text-white p-3 text-center rounded-3">
+                <h2> Room {{roomNumber}} </h2>
+            </div>
+        </div> --}}
+
+        <div class="mx-2 card room-card" style="width: 18rem;" data-floor="{{floor}}" data-status="{{roomStatus}}">
+            <div class="card-body">
+                <div class="d-flex justify-content-between">
+                    <h2 class="card-title room-card-content fs-5">Room {{roomNumber}}</h2>
+                    <p class="{{#if (eq roomStatus 'Available')}}hb-card-available{{else if (eq roomStatus 'Unavailable')}}hb-card-unavailable{{else}}hb-card-occupied{{/if}}">
+                        {{roomStatus}}</p>
+                </div>
+                {{!-- <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6> --}}
+                {{!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                    content.</p> --}}
+                <div class="">
+                    {{#if (eq roomStatus 'Available')}}
+                    <a href="/reception/checkins?room={{roomNumber}}" class="hb-card-link card-link me-2">Check-in </i></a>
+                    <span><i class="bi bi-box-arrow-up-right"></i></span>
+                    {{else if (eq roomStatus 'Unavailable')}}
+
+                    {{else}}
+                    <a href="/reception/checkouts?room={{roomNumber}}" class="hb-card-link card-link me-2">Checkout</a>
+                    <span><i class="bi bi-box-arrow-up-right"></i></span>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Get filter elements
+        const floorFilter = document.getElementById("floorFilter");
+        const availabilityFilter = document.getElementById("availabilityFilter");
+        const noRoomsMessage = document.getElementById("noRoomsMessage"); 
+        const rooms = document.querySelectorAll(".room-card");
+
+        // Function to filter rooms based on selected floor and availability
+        function filterRooms() {
+            const selectedFloor = floorFilter.value;
+            const selectedStatus = availabilityFilter.value;
+            let visibleRoomCount = 0; // Here i am tracking number of visible rooms
+            let availableRooms = 0;  
+            let occupiedRooms = 0;
+
+           rooms.forEach(room => {
+    const roomFloor = room.dataset.floor;
+    const roomStatus = room.dataset.status;
+    const roomContent = room.querySelector(".room-card-content");
+
+    const matchesFloor = (roomFloor === selectedFloor);
+    const matchesStatus = (selectedStatus === "all" || roomStatus === selectedStatus);
+
+    if (matchesFloor && matchesStatus) {
+        room.style.display = "block";
+        visibleRoomCount++; 
+
+        if (roomStatus === "Occupied") {
+            occupiedRooms++;
+            {{!-- roomContent.classList.remove("bg-primary", "bg-warning");
+            roomContent.classList.add("bg-secondary"); --}}
+        } else if (roomStatus === "Unavailable") {
+            {{!-- roomContent.classList.remove("bg-primary", "bg-secondary");
+            roomContent.classList.add("bg-warning"); // Unavailable rooms get a different color --}}
+        } else {
+            availableRooms++;
+            {{!-- roomContent.classList.remove("bg-secondary", "bg-warning");
+            roomContent.classList.add("bg-primary"); --}}
+        }
+    } else {
+        room.style.display = "none";
+    }
+});
+
+
+            // Update message text based on selected status
+            if (visibleRoomCount === 0) {
+                if (selectedStatus === "Available") {
+                    noRoomsMessage.textContent = "All rooms occupied";
+                } else if (selectedStatus === "Occupied") {
+                    noRoomsMessage.textContent = "All rooms available";
+                } else {
+                    noRoomsMessage.textContent = "No rooms found";
+                }
+                noRoomsMessage.style.display = "block";
+            } else {
+                noRoomsMessage.style.display = "none";
+            }
+        }
+
+        // Run filter when dropdowns change
+        floorFilter.addEventListener("change", filterRooms);
+        availabilityFilter.addEventListener("change", filterRooms);
+
+        // Run filter on page load
+        filterRooms();
+
+        // Add click event listener to each room card
+        rooms.forEach(room => {
+            room.addEventListener("click", function () {
+                const roomStatus = room.dataset.status;
+                const roomNumber = room.querySelector("h2").textContent.replace("Room ", "").trim(); // Extract room number
+
+                if (roomStatus === "Available") {
+                    window.location.href = `/reception/checkins?room=${roomNumber}`; // Redirect with aaaaand also carry the room number info
+                } else if (roomStatus === "Occupied") {
+                    window.location.href = `/reception/checkouts?room=${roomNumber}`;
+                }else if (roomStatus === "Unavailable") {
+                     alert(`Room ${roomNumber} is currently unavailable due to cleaning. Please check back later.`);
+                     }
+            });
+        });
+    });
+</script>

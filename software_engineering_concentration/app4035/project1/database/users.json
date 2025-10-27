@@ -1,0 +1,17 @@
+[
+  {
+    "username": "admin@gmail.com",
+    "password": "$2a$12$1D9DdOFnj7KVe00bE.1zeeb5A8grWrunapBurAC9SofbCpvOU0i4S",
+    "role": "admin"
+  },
+  {
+    "username": "housekeeping@gmail.com",
+    "password": "$2b$10$CO5Jh8507SRx5vQ6B5Zv0eryus5Rv91EEPRhe7dB3MkgVb4KCIzue",
+    "role": "housekeeping"
+  },
+  {
+    "username": "receptionist@gmail.com",
+    "password": "$2b$10$Q9pawAqpaE/93n9uBhUHH.BpDBq2GhB8/6xLZrgMw/yQtTTYCWvdW",
+    "role": "receptionist"
+  }
+]
